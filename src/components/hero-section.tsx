@@ -78,19 +78,6 @@ export default function HeroSection({ guestName }: HeroSectionProps) {
           at {invitationData.heroVenueLine}
         </p>
 
-        <div className="hero-screen__portrait">
-          <div className="hero-screen__portrait-frame">
-            <Image
-              src={invitationData.heroImageSrc}
-              alt={invitationData.heroImageAlt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 767px) 144px, 184px"
-              priority
-            />
-          </div>
-        </div>
-
         <button
           type="button"
           className="hero-screen__button font-serif"
@@ -98,6 +85,21 @@ export default function HeroSection({ guestName }: HeroSectionProps) {
         >
           View Invitation
         </button>
+      </div>
+
+      <div className="hero-screen__portrait-shell">
+        <div className="hero-screen__portrait">
+          <div className="hero-screen__portrait-frame">
+            <Image
+              src={invitationData.heroImageSrc}
+              alt={invitationData.heroImageAlt}
+              fill
+              className="object-contain"
+              sizes="(max-width: 767px) 240px, 340px"
+              priority
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

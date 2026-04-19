@@ -1,10 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-import {
-  CradleIcon,
-  LotusDividerIcon,
-  NilavilakkuIcon,
-  TinyFeetIcon,
-} from "@/components/ceremony-motifs";
 
 const galleryCards = [
   {
@@ -12,72 +7,75 @@ const galleryCards = [
     body: "A soft ceremonial centrepiece with warm creams, baby gold, and gentle floral detail.",
     className:
       "sm:col-span-2 lg:col-span-3 lg:row-span-2 lg:translate-y-8 lg:rotate-[-2deg]",
-    icon: "cradle",
     aspect: "aspect-[4/5] lg:aspect-[5/6]",
+    imageSrc: "/assets/cute-baby-born.jpg",
+    imageAlt: "Premium baby naming ceremony portrait",
+    objectPosition: "object-center",
   },
   {
     title: "Nilavilakku Glow",
     body: "Traditional lamp accents bring Kerala warmth without disturbing the minimal luxury mood.",
     className: "lg:col-span-2 lg:-translate-y-8 lg:rotate-[1.8deg]",
-    icon: "lamp",
     aspect: "aspect-[4/3] lg:aspect-[4/5]",
+    imageSrc: "/assets/babyicon.jpg",
+    imageAlt: "Baby portrait paired with premium naming ceremony styling",
+    objectPosition: "object-center",
   },
   {
     title: "Tiny Footsteps",
     body: "Subtle baby motifs replace romantic symbols while keeping the invite refined and elegant.",
     className: "lg:col-span-1 lg:translate-y-10 lg:rotate-[-1.5deg]",
-    icon: "feet",
     aspect: "aspect-[4/5]",
+    imageSrc: "/assets/baby5.jpg",
+    imageAlt: "Baby photo for the naming ceremony moodboard",
+    objectPosition: "object-center",
   },
   {
     title: "Temple Florals",
     body: "Kerala-inspired florals and lotuses soften the palette with cream, peach, and pale teal.",
     className: "lg:col-span-2 lg:-translate-y-12 lg:rotate-[2deg]",
-    icon: "lotus",
     aspect: "aspect-[5/4]",
+    imageSrc: "/assets/baby.jpg",
+    imageAlt: "Baby portrait with soft floral premium styling",
+    objectPosition: "object-center",
   },
   {
     title: "Naming Day Palette",
     body: "Pastel beige, light peach, baby gold, and soft teal create a quiet celebratory tone.",
     className: "sm:col-span-2 lg:col-span-2 lg:translate-y-5 lg:rotate-[-1.2deg]",
-    icon: "lamp",
     aspect: "aspect-[4/5] lg:aspect-[3/4]",
+    imageSrc: "/assets/cute-baby.jpg",
+    imageAlt: "Elegant baby portrait in a premium palette",
+    objectPosition: "object-center",
   },
   {
     title: "Family Gathering",
     body: "A hosting style that feels intimate, prayerful, and welcoming for loved ones arriving together.",
     className: "lg:col-span-2 lg:-translate-y-4 lg:rotate-[1.2deg]",
-    icon: "cradle",
     aspect: "aspect-[4/3] lg:aspect-[4/5]",
+    imageSrc: "/assets/baby2.jpg",
+    imageAlt: "Baby ceremony styling for a family gathering invitation",
+    objectPosition: "object-center",
   },
   {
     title: "Blessing Details",
     body: "Typography remains graceful while the messaging shifts from romance to blessing and tradition.",
     className: "lg:col-span-3 lg:-translate-y-6 lg:rotate-[-1.4deg]",
-    icon: "lotus",
     aspect: "aspect-[4/5] lg:aspect-[5/4]",
+    imageSrc: "/assets/baby5.jpg",
+    imageAlt: "Baby invitation detail photo with refined premium styling",
+    objectPosition: "object-center",
   },
   {
     title: "Kerala Welcome",
     body: "The overall atmosphere stays premium and composed, now tuned for a baby naming ceremony.",
     className: "sm:col-span-2 lg:col-span-3 lg:translate-y-10 lg:rotate-[1.6deg]",
-    icon: "feet",
     aspect: "aspect-[4/5] lg:aspect-[6/5]",
+    imageSrc: "/assets/cute-baby-born.jpg",
+    imageAlt: "Kerala naming ceremony baby welcome image",
+    objectPosition: "object-center",
   },
 ] as const;
-
-function MoodboardIcon({
-  icon,
-}: {
-  icon: (typeof galleryCards)[number]["icon"];
-}) {
-  const className = "h-16 w-16 sm:h-20 sm:w-20";
-
-  if (icon === "cradle") return <CradleIcon className={className} />;
-  if (icon === "lamp") return <NilavilakkuIcon className={className} />;
-  if (icon === "feet") return <TinyFeetIcon className={className} />;
-  return <LotusDividerIcon className={className} />;
-}
 
 type GalleryPageProps = {
   searchParams: Promise<{ guest?: string }>;
@@ -105,7 +103,8 @@ export default async function GalleryPage({
             Kerala Traditions, Softly Framed
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-8 text-stone-700">
-            A curated collection of motifs, tones, and ceremonial details adapted for Baby Name&apos;s Noolukettu invitation.
+            A curated collection of motifs, tones, and ceremonial details adapted
+            for Baby Name&apos;s Noolukettu invitation.
           </p>
           <div className="mt-7 flex justify-center">
             <Link
@@ -121,6 +120,7 @@ export default async function GalleryPage({
           <div className="pointer-events-none absolute left-[8%] top-[10%] hidden h-36 w-36 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.42),transparent_70%)] blur-2xl lg:block" />
           <div className="pointer-events-none absolute right-[10%] top-[38%] hidden h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(236,225,211,0.58),transparent_72%)] blur-3xl lg:block" />
           <div className="pointer-events-none absolute bottom-[6%] left-[34%] hidden h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.32),transparent_70%)] blur-3xl lg:block" />
+
           {galleryCards.map((card, index) => (
             <article
               key={card.title}
@@ -133,18 +133,25 @@ export default async function GalleryPage({
                     : "bg-[radial-gradient(circle_at_bottom,rgba(241,231,219,0.36),transparent_62%)]"
                 }`}
               />
+
               <div
                 className={`relative overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(242,232,219,0.7))] ${card.aspect}`}
               >
-                <div className="pointer-events-none absolute inset-[-6%] rounded-[30px] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.52),rgba(245,237,227,0.18)_56%,transparent_84%)] blur-xl" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(214,231,227,0.32),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.42),transparent_38%,rgba(92,102,84,0.06)_100%)]" />
-                <div className="absolute inset-x-[18%] bottom-0 top-[24%] rounded-t-[220px] border border-[var(--color-baby-gold)]/18 border-b-0" />
-                <div className="relative flex h-full flex-col items-center justify-center px-6 text-center text-[var(--color-forest)]">
-                  <MoodboardIcon icon={card.icon} />
-                  <h2 className="mt-5 font-serif text-[2rem] leading-none sm:text-[2.4rem]">
+                <Image
+                  src={card.imageSrc}
+                  alt={card.imageAlt}
+                  fill
+                  className={`object-cover ${card.objectPosition}`}
+                  sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(45,58,47,0.1)_48%,rgba(39,49,43,0.76)_100%)]" />
+                <div className="pointer-events-none absolute inset-x-[18%] bottom-0 top-[24%] rounded-t-[220px] border border-[var(--color-baby-gold)]/18 border-b-0" />
+
+                <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-7">
+                  <h2 className="font-serif text-[2rem] leading-none sm:text-[2.4rem]">
                     {card.title}
                   </h2>
-                  <p className="mt-4 max-w-[280px] text-[15px] leading-7 text-stone-600">
+                  <p className="mt-4 max-w-[300px] text-[15px] leading-7 text-white/88">
                     {card.body}
                   </p>
                 </div>

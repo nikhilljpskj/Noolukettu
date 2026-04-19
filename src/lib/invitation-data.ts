@@ -29,9 +29,9 @@ export const invitationData = {
   babyName: "Baby Name",
   parents: "Parent Name 1 & Parent Name 2",
   grandparents: "Grandparent Name 1 & Grandparent Name 2",
-  heroDateLine: "Sunday 18 October 2026  •  10:30 AM onwards",
+  heroDateLine: "Sunday 18 October 2026  |  10:30 AM onwards",
   heroVenueLine: "House Name, Street Name, Area Name, City, Kerala 689000",
-  heroImageSrc: "/assets/cute-baby-born.jpg",
+  heroImageSrc: "/assets/cute-baby.jpg",
   heroImageAlt: "Soft baby portrait for the naming ceremony invitation",
   events: {
     ceremony: {
@@ -106,7 +106,7 @@ export const invitationData = {
     },
     {
       title: "Blessing RSVP",
-      body: "Kindly share your name to send your blessings to the family",
+      body: "Kindly share your name and attendance details with the family",
       icon: "mail",
     },
   ],
