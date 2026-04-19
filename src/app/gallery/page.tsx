@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const galleryCards = [
   {
-    title: "Cradle Blessing",
-    body: "A soft ceremonial centrepiece with warm creams, baby gold, and gentle floral detail.",
+    title: "First Blessings",
+    body: "A tender newborn portrait that sets the tone for a warm and prayerful naming celebration.",
     className:
       "sm:col-span-2 lg:col-span-3 lg:row-span-2 lg:translate-y-8 lg:rotate-[-2deg]",
     aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[5/6]",
@@ -13,8 +13,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Nilavilakku Glow",
-    body: "Traditional lamp accents bring Kerala warmth without disturbing the minimal luxury mood.",
+    title: "Soft Golden Light",
+    body: "A gentle baby close-up framed with warm tones, echoing the quiet glow of the ceremony morning.",
     className: "lg:col-span-2 lg:-translate-y-8 lg:rotate-[1.8deg]",
     aspect: "aspect-[5/4] lg:aspect-[4/5]",
     imageSrc: "/assets/babyicon.jpg",
@@ -22,8 +22,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Tiny Footsteps",
-    body: "Subtle baby motifs replace romantic symbols while keeping the invite refined and elegant.",
+    title: "Little Details",
+    body: "A sweet portrait study that highlights the softness, innocence, and calm beauty of the day.",
     className: "lg:col-span-1 lg:translate-y-10 lg:rotate-[-1.5deg]",
     aspect: "aspect-[5/6] sm:aspect-[4/5]",
     imageSrc: "/assets/baby5.jpg",
@@ -31,8 +31,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Temple Florals",
-    body: "Kerala-inspired florals and lotuses soften the palette with cream, peach, and pale teal.",
+    title: "Gentle Portrait",
+    body: "A serene baby image paired with airy tones and floral softness for an elegant invitation mood.",
     className: "lg:col-span-2 lg:-translate-y-12 lg:rotate-[2deg]",
     aspect: "aspect-[5/4]",
     imageSrc: "/assets/baby.jpg",
@@ -40,8 +40,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Naming Day Palette",
-    body: "Pastel beige, light peach, baby gold, and soft teal create a quiet celebratory tone.",
+    title: "Warm Celebration",
+    body: "This portrait carries the bright, joyful, and softly premium feeling of Baby Name's special day.",
     className: "sm:col-span-2 lg:col-span-2 lg:translate-y-5 lg:rotate-[-1.2deg]",
     aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[3/4]",
     imageSrc: "/assets/cute-baby.jpg",
@@ -49,8 +49,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Family Gathering",
-    body: "A hosting style that feels intimate, prayerful, and welcoming for loved ones arriving together.",
+    title: "Cherished Moment",
+    body: "A calm and affectionate baby portrait that reflects the intimacy of a family gathering at home.",
     className: "lg:col-span-2 lg:-translate-y-4 lg:rotate-[1.2deg]",
     aspect: "aspect-[5/4] lg:aspect-[4/5]",
     imageSrc: "/assets/baby2.jpg",
@@ -58,8 +58,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Blessing Details",
-    body: "Typography remains graceful while the messaging shifts from romance to blessing and tradition.",
+    title: "Tender Expressions",
+    body: "A closer baby-focused frame that adds warmth, charm, and emotional softness to the visual story.",
     className: "lg:col-span-3 lg:-translate-y-6 lg:rotate-[-1.4deg]",
     aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[5/4]",
     imageSrc: "/assets/baby5.jpg",
@@ -67,8 +67,8 @@ const galleryCards = [
     objectPosition: "object-center",
   },
   {
-    title: "Kerala Welcome",
-    body: "The overall atmosphere stays premium and composed, now tuned for a baby naming ceremony.",
+    title: "A Loving Welcome",
+    body: "A welcoming portrait that beautifully introduces the baby at the heart of this Noolukettu invitation.",
     className: "sm:col-span-2 lg:col-span-3 lg:translate-y-10 lg:rotate-[1.6deg]",
     aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[6/5]",
     imageSrc: "/assets/cute-baby-born.jpg",
