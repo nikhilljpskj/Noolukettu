@@ -24,8 +24,8 @@ function FeatureTiles({ guestName }: { guestName: string }) {
       href: storyHref,
     },
     {
-      title: "Ceremony Moodboard",
-      body: "Traditional Kerala details and soft ceremonial motifs",
+      title: "Photo Gallery",
+      body: "Browse baby portraits, ceremony styling, and warm visual details",
       icon: "\u25CC",
       href: galleryHref,
     },
@@ -90,7 +90,7 @@ function InvitationNavigation({ guestName }: { guestName: string }) {
   const links = [
     { label: "Ceremony", href: "#ceremony" },
     { label: "Blessings & Lunch", href: "#reception" },
-    { label: "Gallery", href: galleryHref, external: false },
+    { label: "Photo Gallery", href: galleryHref, external: false },
     { label: "Blessing Note", href: storyHref, external: false },
     { label: "RSVP", href: "#rsvp" },
   ];
@@ -103,7 +103,7 @@ function InvitationNavigation({ guestName }: { guestName: string }) {
             Explore The Invitation
           </p>
           <p className="mt-2 text-[14px] leading-6 text-stone-600 sm:text-[15px] sm:leading-7">
-            Move between the ceremony details, gallery, blessing note, and RSVP.
+            Move between the ceremony details, photo gallery, blessing note, and RSVP.
           </p>
         </div>
 

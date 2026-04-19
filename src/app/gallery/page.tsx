@@ -91,21 +91,50 @@ export default async function GalleryPage({
     : "/";
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[linear-gradient(180deg,#f8f1e8_0%,#f5ede3_34%,#f1e7db_68%,#efe4d6_100%)] px-4 py-6 sm:px-6 lg:px-8">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.48),transparent_28%),radial-gradient(circle_at_bottom,rgba(255,255,255,0.22),transparent_24%)]" />
+    <main className="min-h-screen overflow-hidden bg-[linear-gradient(180deg,#fbf5ee_0%,#f5eadc_28%,#efe4d6_60%,#e9ddd1_100%)] px-4 py-6 sm:px-6 lg:px-8">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.62),transparent_24%),radial-gradient(circle_at_top_right,rgba(214,231,227,0.24),transparent_24%),radial-gradient(circle_at_bottom_left,rgba(245,223,196,0.28),transparent_28%),radial-gradient(circle_at_bottom,rgba(255,255,255,0.18),transparent_24%)]" />
       <div className="mx-auto max-w-[1120px] space-y-8">
-        <section className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(248,241,233,0.98))] px-4 py-8 text-center shadow-[0_24px_70px_rgba(113,126,108,0.12)] sm:rounded-[34px] sm:px-8 sm:py-10 lg:px-12">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.48),transparent_72%)]" />
+        <section className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(135deg,rgba(255,255,255,0.96),rgba(248,241,233,0.96)_46%,rgba(232,241,238,0.82)_100%)] px-4 py-8 text-center shadow-[0_24px_70px_rgba(113,126,108,0.12)] sm:rounded-[34px] sm:px-8 sm:py-10 lg:px-12">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.56),transparent_72%)]" />
+          <div className="pointer-events-none absolute -left-12 top-10 h-28 w-28 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.5),transparent_72%)] blur-2xl" />
+          <div className="pointer-events-none absolute -right-8 bottom-6 h-24 w-24 rounded-full bg-[radial-gradient(circle,rgba(214,231,227,0.45),transparent_72%)] blur-2xl" />
           <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[12px] sm:tracking-[0.32em]">
-            Ceremony Moodboard
+            Photo Gallery
           </p>
           <h1 className="mt-3 font-serif text-[2.25rem] leading-none text-[var(--color-forest)] sm:text-[4rem]">
-            Kerala Traditions, Softly Framed
+            Moments, Textures, And Tender Details
           </h1>
           <p className="mx-auto mt-3 max-w-2xl text-[15px] leading-7 text-stone-700 sm:mt-4 sm:text-[17px] sm:leading-8">
-            A curated collection of motifs, tones, and ceremonial details adapted
-            for Baby Name&apos;s Noolukettu invitation.
+            Explore a brighter visual collection of baby portraits, ceremonial
+            styling, soft Kerala accents, and premium details created for Baby
+            Name&apos;s Noolukettu invitation.
           </p>
+          <div className="mx-auto mt-6 grid max-w-3xl gap-3 sm:grid-cols-3">
+            <div className="rounded-[18px] border border-white/70 bg-white/66 px-4 py-4 shadow-[0_12px_24px_rgba(113,126,108,0.08)]">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)]">
+                Portrait Mood
+              </p>
+              <p className="mt-2 text-[14px] leading-6 text-stone-700">
+                Soft baby imagery with a warm premium finish.
+              </p>
+            </div>
+            <div className="rounded-[18px] border border-white/70 bg-white/66 px-4 py-4 shadow-[0_12px_24px_rgba(113,126,108,0.08)]">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)]">
+                Ceremony Style
+              </p>
+              <p className="mt-2 text-[14px] leading-6 text-stone-700">
+                Kerala tradition, gold accents, and quiet elegance.
+              </p>
+            </div>
+            <div className="rounded-[18px] border border-white/70 bg-white/66 px-4 py-4 shadow-[0_12px_24px_rgba(113,126,108,0.08)]">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)]">
+                Invitation Feel
+              </p>
+              <p className="mt-2 text-[14px] leading-6 text-stone-700">
+                Bright, heartfelt, and designed to feel celebratory.
+              </p>
+            </div>
+          </div>
           <div className="mt-7 flex justify-center">
             <Link
               href={inviteHref}
@@ -117,20 +146,20 @@ export default async function GalleryPage({
         </section>
 
         <section className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-6 lg:gap-5 lg:pb-14">
-          <div className="pointer-events-none absolute left-[8%] top-[10%] hidden h-36 w-36 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.42),transparent_70%)] blur-2xl lg:block" />
-          <div className="pointer-events-none absolute right-[10%] top-[38%] hidden h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(236,225,211,0.58),transparent_72%)] blur-3xl lg:block" />
-          <div className="pointer-events-none absolute bottom-[6%] left-[34%] hidden h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.32),transparent_70%)] blur-3xl lg:block" />
+          <div className="pointer-events-none absolute left-[8%] top-[10%] hidden h-36 w-36 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.46),transparent_70%)] blur-2xl lg:block" />
+          <div className="pointer-events-none absolute right-[10%] top-[38%] hidden h-44 w-44 rounded-full bg-[radial-gradient(circle,rgba(236,225,211,0.62),transparent_72%)] blur-3xl lg:block" />
+          <div className="pointer-events-none absolute bottom-[6%] left-[34%] hidden h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(214,231,227,0.26),transparent_70%)] blur-3xl lg:block" />
 
           {galleryCards.map((card, index) => (
             <article
               key={card.title}
-              className={`group relative overflow-hidden rounded-[28px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(247,241,234,0.44))] p-2 shadow-[0_18px_44px_rgba(113,126,108,0.1)] transition duration-500 hover:-translate-y-1 hover:rotate-0 hover:shadow-[0_24px_54px_rgba(113,126,108,0.16)] sm:rounded-[34px] ${card.className}`}
+              className={`group relative overflow-hidden rounded-[28px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(247,241,234,0.5))] p-2 shadow-[0_18px_44px_rgba(113,126,108,0.1)] transition duration-500 hover:-translate-y-1.5 hover:rotate-0 hover:shadow-[0_28px_64px_rgba(113,126,108,0.18)] sm:rounded-[34px] ${card.className}`}
             >
               <div
                 className={`pointer-events-none absolute inset-0 rounded-[34px] opacity-0 transition duration-500 group-hover:opacity-100 ${
                   index % 2 === 0
-                    ? "bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.24),transparent_64%)]"
-                    : "bg-[radial-gradient(circle_at_bottom,rgba(241,231,219,0.36),transparent_62%)]"
+                    ? "bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.28),transparent_64%)]"
+                    : "bg-[radial-gradient(circle_at_bottom,rgba(241,231,219,0.42),transparent_62%)]"
                 }`}
               />
 
@@ -144,8 +173,9 @@ export default async function GalleryPage({
                   className={`object-cover ${card.objectPosition}`}
                   sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(45,58,47,0.1)_48%,rgba(39,49,43,0.76)_100%)]" />
-                <div className="pointer-events-none absolute inset-x-[18%] bottom-0 top-[24%] rounded-t-[220px] border border-[var(--color-baby-gold)]/18 border-b-0" />
+                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.1),rgba(45,58,47,0.08)_42%,rgba(39,49,43,0.78)_100%)]" />
+                <div className="pointer-events-none absolute inset-x-[18%] bottom-0 top-[24%] rounded-t-[220px] border border-[var(--color-baby-gold)]/24 border-b-0" />
+                <div className="pointer-events-none absolute left-4 top-4 h-14 w-14 rounded-full bg-[radial-gradient(circle,rgba(255,255,255,0.34),transparent_72%)] blur-xl sm:h-20 sm:w-20" />
 
                 <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-7">
                   <h2 className="font-serif text-[1.6rem] leading-none sm:text-[2.4rem]">
