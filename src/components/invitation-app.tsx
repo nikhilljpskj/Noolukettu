@@ -46,29 +46,29 @@ function FeatureTiles({ guestName }: { guestName: string }) {
       {items.map((item) => (
         <article
           key={item.title}
-          className="rounded-[24px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,243,237,0.98))] px-6 py-7 text-center shadow-[0_16px_42px_rgba(113,126,108,0.1)]"
+          className="rounded-[24px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,243,237,0.98))] px-5 py-6 text-center shadow-[0_16px_42px_rgba(113,126,108,0.1)] sm:px-6 sm:py-7"
         >
           {item.href ? (
             <Link href={item.href} className="block">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[#f7f6f1] text-[28px] text-[var(--color-sage-strong)]">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[#f7f6f1] text-[24px] text-[var(--color-sage-strong)] sm:h-16 sm:w-16 sm:text-[28px]">
                 {item.icon}
               </div>
-              <h3 className="mt-5 font-serif text-[2rem] leading-none text-[var(--color-forest)]">
+              <h3 className="mt-4 font-serif text-[1.7rem] leading-none text-[var(--color-forest)] sm:mt-5 sm:text-[2rem]">
                 {item.title}
               </h3>
-              <p className="mx-auto mt-3 max-w-[180px] text-[16px] leading-7 text-stone-600">
+              <p className="mx-auto mt-3 max-w-[200px] text-[15px] leading-6 text-stone-600 sm:max-w-[180px] sm:text-[16px] sm:leading-7">
                 {item.body}
               </p>
             </Link>
           ) : (
             <>
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[#f7f6f1] text-[28px] text-[var(--color-sage-strong)]">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[#f7f6f1] text-[24px] text-[var(--color-sage-strong)] sm:h-16 sm:w-16 sm:text-[28px]">
                 {item.icon}
               </div>
-              <h3 className="mt-5 font-serif text-[2rem] leading-none text-[var(--color-forest)]">
+              <h3 className="mt-4 font-serif text-[1.7rem] leading-none text-[var(--color-forest)] sm:mt-5 sm:text-[2rem]">
                 {item.title}
               </h3>
-              <p className="mx-auto mt-3 max-w-[180px] text-[16px] leading-7 text-stone-600">
+              <p className="mx-auto mt-3 max-w-[200px] text-[15px] leading-6 text-stone-600 sm:max-w-[180px] sm:text-[16px] sm:leading-7">
                 {item.body}
               </p>
             </>
@@ -96,24 +96,24 @@ function InvitationNavigation({ guestName }: { guestName: string }) {
   ];
 
   return (
-    <section className="rounded-[26px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(248,243,237,0.96))] px-5 py-5 shadow-[0_18px_42px_rgba(113,126,108,0.08)] sm:px-6">
+    <section className="rounded-[26px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(248,243,237,0.96))] px-4 py-4 shadow-[0_18px_42px_rgba(113,126,108,0.08)] sm:px-6 sm:py-5">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]">
+          <p className="text-[10px] uppercase tracking-[0.26em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.3em]">
             Explore The Invitation
           </p>
-          <p className="mt-2 text-[15px] leading-7 text-stone-600">
+          <p className="mt-2 text-[14px] leading-6 text-stone-600 sm:text-[15px] sm:leading-7">
             Move between the ceremony details, gallery, blessing note, and RSVP.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           {links.map((link) =>
             link.href.startsWith("#") ? (
               <a
                 key={link.label}
                 href={link.href}
-                className="inline-flex items-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/88 px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+                className="inline-flex min-h-10 items-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/88 px-4 py-2 text-[10px] uppercase tracking-[0.16em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-[11px] sm:tracking-[0.22em]"
               >
                 {link.label}
               </a>
@@ -121,7 +121,7 @@ function InvitationNavigation({ guestName }: { guestName: string }) {
               <Link
                 key={link.label}
                 href={link.href}
-                className="inline-flex items-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/88 px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+                className="inline-flex min-h-10 items-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/88 px-4 py-2 text-[10px] uppercase tracking-[0.16em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5 sm:px-5 sm:py-2.5 sm:text-[11px] sm:tracking-[0.22em]"
               >
                 {link.label}
               </Link>
@@ -142,7 +142,7 @@ export function InvitationApp() {
     <main className="relative overflow-hidden bg-[var(--color-ivory)]">
       <DecorativeLayer />
 
-      <div className="mx-auto flex min-h-screen w-full max-w-[1120px] flex-col gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+      <div className="mx-auto flex min-h-screen w-full max-w-[1120px] flex-col gap-4 px-3 py-3 sm:px-6 sm:py-6 lg:px-8">
         <section className="relative" id="hero">
           <HeroSection guestName={guestName} />
         </section>

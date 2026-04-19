@@ -209,28 +209,28 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
   return (
     <section
       id="rsvp"
-      className="fade-in-section relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,241,233,0.98))] px-6 py-8 shadow-[0_24px_70px_rgba(113,126,108,0.12)] sm:px-8 sm:py-10 lg:px-10"
+      className="fade-in-section relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.95),rgba(248,241,233,0.98))] px-4 py-6 shadow-[0_24px_70px_rgba(113,126,108,0.12)] sm:px-8 sm:py-10 lg:px-10"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-36 bg-[radial-gradient(circle_at_top,rgba(220,230,215,0.3),transparent_70%)]" />
 
       <div className="relative mx-auto max-w-4xl text-center">
-        <p className="text-[12px] uppercase tracking-[0.32em] text-[var(--color-sage-strong)]">
+        <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[12px] sm:tracking-[0.32em]">
           Blessing RSVP
         </p>
-        <h2 className="mt-3 font-serif text-[2.7rem] leading-[1] text-[var(--color-forest)] sm:text-[3.4rem]">
+        <h2 className="mt-3 font-serif text-[2rem] leading-[0.98] text-[var(--color-forest)] sm:text-[3.4rem]">
           We Would Be Honoured To Receive Your Blessings
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-8 text-stone-700">
+        <p className="mx-auto mt-3 max-w-2xl text-[15px] leading-7 text-stone-700 sm:mt-4 sm:text-[17px] sm:leading-8">
           Please confirm your presence for Baby Name&apos;s Noolukettu ceremony.
         </p>
       </div>
 
       <form
         onSubmit={handleSubmit}
-        className="relative mx-auto mt-8 max-w-4xl space-y-6"
+        className="relative mx-auto mt-6 max-w-4xl space-y-5 sm:mt-8 sm:space-y-6"
       >
-        <label className="block rounded-[26px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-6">
-          <span className="text-[11px] uppercase tracking-[0.32em] text-[var(--color-sage-strong)]">
+        <label className="block rounded-[24px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-4 sm:rounded-[26px] sm:p-6">
+          <span className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.32em]">
             Guest Name
           </span>
           <input
@@ -244,11 +244,11 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
               }
             }}
             placeholder="Enter your name"
-            className="mt-4 w-full rounded-[22px] border border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88 px-4 py-4 text-[16px] text-stone-700 outline-none transition placeholder:text-stone-400 focus:border-[var(--color-sage-strong)]/28"
+            className="mt-3 w-full rounded-[18px] border border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88 px-4 py-3.5 text-[15px] text-stone-700 outline-none transition placeholder:text-stone-400 focus:border-[var(--color-sage-strong)]/28 sm:mt-4 sm:rounded-[22px] sm:py-4 sm:text-[16px]"
           />
         </label>
 
-        <div className="flex items-center justify-center gap-3 text-[11px] uppercase tracking-[0.28em] text-[var(--color-sage-strong)]">
+        <div className="flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.2em] text-[var(--color-sage-strong)] sm:gap-3 sm:text-[11px] sm:tracking-[0.28em]">
           <span className={step === 1 ? "opacity-100" : "opacity-45"}>Page 1</span>
           <span className="h-px w-10 bg-current/30" />
           <span className={step === 2 ? "opacity-100" : "opacity-45"}>Page 2</span>
@@ -261,16 +261,16 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                 type="button"
                 onClick={() => handleAttendanceSelect(true)}
                 className={[
-                  "rounded-[26px] border px-6 py-6 text-left transition duration-300",
+                  "rounded-[22px] border px-4 py-5 text-left transition duration-300 sm:rounded-[26px] sm:px-6 sm:py-6",
                   attending
                     ? "border-[var(--color-sage-strong)]/28 bg-[linear-gradient(180deg,rgba(233,241,228,0.92),rgba(248,245,239,0.88))] shadow-[0_14px_36px_rgba(108,129,101,0.13)]"
                     : "border-[var(--color-sage-strong)]/12 bg-white/88",
                 ].join(" ")}
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 bg-white text-[var(--color-sage-strong)]">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 bg-white text-[var(--color-sage-strong)] sm:h-14 sm:w-14">
                   <svg
                     viewBox="0 0 24 24"
-                    className="h-7 w-7"
+                    className="h-6 w-6 sm:h-7 sm:w-7"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -278,10 +278,10 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                     <path d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="block font-serif text-[2rem] leading-none text-[var(--color-forest)]">
+                <span className="block font-serif text-[1.6rem] leading-none text-[var(--color-forest)] sm:text-[2rem]">
                   Yes, I&apos;ll be there
                 </span>
-                <span className="mt-3 block text-[15px] text-stone-600">
+                <span className="mt-3 block text-[14px] leading-6 text-stone-600 sm:text-[15px]">
                   We look forward to sharing this joyful day together.
                 </span>
               </button>
@@ -290,16 +290,16 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                 type="button"
                 onClick={() => handleAttendanceSelect(false)}
                 className={[
-                  "rounded-[26px] border px-6 py-6 text-left transition duration-300",
+                  "rounded-[22px] border px-4 py-5 text-left transition duration-300 sm:rounded-[26px] sm:px-6 sm:py-6",
                   attending === false
                     ? "border-[var(--color-rose)]/35 bg-[linear-gradient(180deg,rgba(251,239,236,0.96),rgba(255,248,245,0.9))] shadow-[0_14px_36px_rgba(189,138,132,0.12)]"
                     : "border-[var(--color-sage-strong)]/12 bg-white/88",
                 ].join(" ")}
               >
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-[var(--color-rose)]/18 bg-white text-[var(--color-rose)]">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full border border-[var(--color-rose)]/18 bg-white text-[var(--color-rose)] sm:h-14 sm:w-14">
                   <svg
                     viewBox="0 0 24 24"
-                    className="h-7 w-7"
+                    className="h-6 w-6 sm:h-7 sm:w-7"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="2"
@@ -307,10 +307,10 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                     <path d="M6 6l12 12M18 6L6 18" />
                   </svg>
                 </div>
-                <span className="block font-serif text-[2rem] leading-none text-[var(--color-forest)]">
+                <span className="block font-serif text-[1.6rem] leading-none text-[var(--color-forest)] sm:text-[2rem]">
                   Sorry, can&apos;t make it
                 </span>
-                <span className="mt-3 block text-[15px] text-stone-600">
+                <span className="mt-3 block text-[14px] leading-6 text-stone-600 sm:text-[15px]">
                   Your blessings will still be with Baby Name and the family.
                 </span>
               </button>
@@ -320,7 +320,7 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="inline-flex min-w-[240px] items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 bg-[var(--color-forest)] px-9 py-4 text-[12px] uppercase tracking-[0.28em] text-white transition duration-300 hover:-translate-y-0.5"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 bg-[var(--color-forest)] px-7 py-3.5 text-[11px] uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-0.5 sm:min-w-[240px] sm:w-auto sm:px-9 sm:py-4 sm:text-[12px] sm:tracking-[0.28em]"
               >
                 Continue
               </button>
@@ -329,18 +329,18 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
         ) : (
           <>
             <div className="text-center">
-              <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]">
+              <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.3em]">
                 More Details
               </p>
-              <p className="mt-2 text-[15px] leading-7 text-stone-600">
+              <p className="mt-2 text-[14px] leading-6 text-stone-600 sm:text-[15px] sm:leading-7">
                 Choose which parts of the gathering you can join, set guest count,
                 and leave a note if you like.
               </p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
-              <div className="rounded-[26px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-6">
-                <p className="text-[11px] uppercase tracking-[0.32em] text-[var(--color-sage-strong)]">
+              <div className="rounded-[22px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-4 sm:rounded-[26px] sm:p-6">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.32em]">
                   Which Events Can You Join?
                 </p>
 
@@ -355,13 +355,13 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                         : "border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88",
                     ].join(" ")}
                   >
-                    <span className="block text-[11px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]/80">
+                    <span className="block text-[10px] uppercase tracking-[0.2em] text-[var(--color-sage-strong)]/80 sm:text-[11px] sm:tracking-[0.3em]">
                       Naming Ritual
                     </span>
-                    <span className="mt-2 block font-serif text-[1.55rem] leading-tight text-[var(--color-forest)]">
+                    <span className="mt-2 block font-serif text-[1.3rem] leading-tight text-[var(--color-forest)] sm:text-[1.55rem]">
                       {ceremonyAttending ? "I can attend" : "Not available"}
                     </span>
-                    <span className="mt-2 block text-[14px] text-stone-500">
+                    <span className="mt-2 block text-[13px] leading-6 text-stone-500 sm:text-[14px]">
                       Tap to{" "}
                       {ceremonyAttending
                         ? "mark unavailable"
@@ -379,13 +379,13 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                         : "border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88",
                     ].join(" ")}
                   >
-                    <span className="block text-[11px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]/80">
+                    <span className="block text-[10px] uppercase tracking-[0.2em] text-[var(--color-sage-strong)]/80 sm:text-[11px] sm:tracking-[0.3em]">
                       Blessings & Lunch
                     </span>
-                    <span className="mt-2 block font-serif text-[1.55rem] leading-tight text-[var(--color-forest)]">
+                    <span className="mt-2 block font-serif text-[1.3rem] leading-tight text-[var(--color-forest)] sm:text-[1.55rem]">
                       {receptionAttending ? "I can attend" : "Not available"}
                     </span>
-                    <span className="mt-2 block text-[14px] text-stone-500">
+                    <span className="mt-2 block text-[13px] leading-6 text-stone-500 sm:text-[14px]">
                       Tap to{" "}
                       {receptionAttending
                         ? "mark unavailable"
@@ -395,13 +395,13 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                 </div>
               </div>
 
-              <div className="rounded-[26px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-6">
+              <div className="rounded-[22px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-4 sm:rounded-[26px] sm:p-6">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-[11px] uppercase tracking-[0.32em] text-[var(--color-sage-strong)]">
+                    <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.32em]">
                       Guest Count
                     </p>
-                    <p className="mt-2 text-[15px] text-stone-600">
+                    <p className="mt-2 text-[14px] leading-6 text-stone-600 sm:text-[15px]">
                       Adjust the number of family members included in this RSVP.
                     </p>
                   </div>
@@ -410,28 +410,28 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                     <button
                       type="button"
                       onClick={() => updateGuestCount("down")}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 text-2xl text-[var(--color-forest)] transition hover:bg-[var(--color-sage)]/40"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 text-xl text-[var(--color-forest)] transition hover:bg-[var(--color-sage)]/40 sm:h-11 sm:w-11 sm:text-2xl"
                     >
                       -
                     </button>
-                    <span className="w-10 text-center font-serif text-[2rem] text-[var(--color-forest)]">
+                    <span className="w-9 text-center font-serif text-[1.7rem] text-[var(--color-forest)] sm:w-10 sm:text-[2rem]">
                       {guestCount}
                     </span>
                     <button
                       type="button"
                       onClick={() => updateGuestCount("up")}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 text-2xl text-[var(--color-forest)] transition hover:bg-[var(--color-sage)]/40"
+                      className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 text-xl text-[var(--color-forest)] transition hover:bg-[var(--color-sage)]/40 sm:h-11 sm:w-11 sm:text-2xl"
                     >
                       +
                     </button>
                   </div>
                 </div>
 
-                <div className="mt-6 rounded-[22px] border border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88 px-4 py-4">
-                  <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]">
+                <div className="mt-5 rounded-[18px] border border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88 px-4 py-4 sm:mt-6 sm:rounded-[22px]">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.3em]">
                     Invitation Context
                   </p>
-                  <p className="mt-2 text-[15px] leading-7 text-stone-700">
+                  <p className="mt-2 text-[14px] leading-6 text-stone-700 sm:text-[15px] sm:leading-7">
                     {activeGuestName
                       ? `Invitation for ${activeGuestName}`
                       : "Open invitation view without a guest query parameter"}
@@ -440,8 +440,8 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
               </div>
             </div>
 
-            <label className="block rounded-[26px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-6">
-              <span className="text-[11px] uppercase tracking-[0.32em] text-[var(--color-sage-strong)]">
+            <label className="block rounded-[22px] border border-[var(--color-sage-strong)]/12 bg-white/88 p-4 sm:rounded-[26px] sm:p-6">
+              <span className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.32em]">
                 Optional Message
               </span>
               <textarea
@@ -449,7 +449,7 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
                 onChange={(event) => setMessage(event.target.value)}
                 rows={5}
                 placeholder="Share a blessing or note for Baby Name and the family..."
-                className="mt-4 w-full resize-none rounded-[22px] border border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88 px-4 py-4 text-[16px] text-stone-700 outline-none transition placeholder:text-stone-400 focus:border-[var(--color-sage-strong)]/28"
+                className="mt-3 w-full resize-none rounded-[18px] border border-[var(--color-sage-strong)]/10 bg-[var(--color-ivory)]/88 px-4 py-3.5 text-[15px] text-stone-700 outline-none transition placeholder:text-stone-400 focus:border-[var(--color-sage-strong)]/28 sm:mt-4 sm:rounded-[22px] sm:py-4 sm:text-[16px]"
               />
             </label>
 
@@ -457,14 +457,14 @@ export function RSVPSection({ guestName, hasGuestParam }: RSVPSectionProps) {
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="inline-flex min-w-[180px] items-center justify-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white px-8 py-4 text-[12px] uppercase tracking-[0.24em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white px-7 py-3.5 text-[11px] uppercase tracking-[0.18em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5 sm:min-w-[180px] sm:w-auto sm:px-8 sm:py-4 sm:text-[12px] sm:tracking-[0.24em]"
               >
                 Back
               </button>
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="inline-flex min-w-[260px] items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 bg-[var(--color-forest)] px-9 py-4 text-[12px] uppercase tracking-[0.28em] text-white transition duration-300 hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-70"
+                className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-[var(--color-sage-strong)]/18 bg-[var(--color-forest)] px-7 py-3.5 text-[11px] uppercase tracking-[0.18em] text-white transition duration-300 hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-70 sm:min-w-[260px] sm:w-auto sm:px-9 sm:py-4 sm:text-[12px] sm:tracking-[0.28em]"
               >
                 {status === "loading"
                   ? "Sending RSVP..."

@@ -7,7 +7,7 @@ const galleryCards = [
     body: "A soft ceremonial centrepiece with warm creams, baby gold, and gentle floral detail.",
     className:
       "sm:col-span-2 lg:col-span-3 lg:row-span-2 lg:translate-y-8 lg:rotate-[-2deg]",
-    aspect: "aspect-[4/5] lg:aspect-[5/6]",
+    aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[5/6]",
     imageSrc: "/assets/cute-baby-born.jpg",
     imageAlt: "Premium baby naming ceremony portrait",
     objectPosition: "object-center",
@@ -16,7 +16,7 @@ const galleryCards = [
     title: "Nilavilakku Glow",
     body: "Traditional lamp accents bring Kerala warmth without disturbing the minimal luxury mood.",
     className: "lg:col-span-2 lg:-translate-y-8 lg:rotate-[1.8deg]",
-    aspect: "aspect-[4/3] lg:aspect-[4/5]",
+    aspect: "aspect-[5/4] lg:aspect-[4/5]",
     imageSrc: "/assets/babyicon.jpg",
     imageAlt: "Baby portrait paired with premium naming ceremony styling",
     objectPosition: "object-center",
@@ -25,7 +25,7 @@ const galleryCards = [
     title: "Tiny Footsteps",
     body: "Subtle baby motifs replace romantic symbols while keeping the invite refined and elegant.",
     className: "lg:col-span-1 lg:translate-y-10 lg:rotate-[-1.5deg]",
-    aspect: "aspect-[4/5]",
+    aspect: "aspect-[5/6] sm:aspect-[4/5]",
     imageSrc: "/assets/baby5.jpg",
     imageAlt: "Baby photo for the naming ceremony moodboard",
     objectPosition: "object-center",
@@ -43,7 +43,7 @@ const galleryCards = [
     title: "Naming Day Palette",
     body: "Pastel beige, light peach, baby gold, and soft teal create a quiet celebratory tone.",
     className: "sm:col-span-2 lg:col-span-2 lg:translate-y-5 lg:rotate-[-1.2deg]",
-    aspect: "aspect-[4/5] lg:aspect-[3/4]",
+    aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[3/4]",
     imageSrc: "/assets/cute-baby.jpg",
     imageAlt: "Elegant baby portrait in a premium palette",
     objectPosition: "object-center",
@@ -52,7 +52,7 @@ const galleryCards = [
     title: "Family Gathering",
     body: "A hosting style that feels intimate, prayerful, and welcoming for loved ones arriving together.",
     className: "lg:col-span-2 lg:-translate-y-4 lg:rotate-[1.2deg]",
-    aspect: "aspect-[4/3] lg:aspect-[4/5]",
+    aspect: "aspect-[5/4] lg:aspect-[4/5]",
     imageSrc: "/assets/baby2.jpg",
     imageAlt: "Baby ceremony styling for a family gathering invitation",
     objectPosition: "object-center",
@@ -61,7 +61,7 @@ const galleryCards = [
     title: "Blessing Details",
     body: "Typography remains graceful while the messaging shifts from romance to blessing and tradition.",
     className: "lg:col-span-3 lg:-translate-y-6 lg:rotate-[-1.4deg]",
-    aspect: "aspect-[4/5] lg:aspect-[5/4]",
+    aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[5/4]",
     imageSrc: "/assets/baby5.jpg",
     imageAlt: "Baby invitation detail photo with refined premium styling",
     objectPosition: "object-center",
@@ -70,7 +70,7 @@ const galleryCards = [
     title: "Kerala Welcome",
     body: "The overall atmosphere stays premium and composed, now tuned for a baby naming ceremony.",
     className: "sm:col-span-2 lg:col-span-3 lg:translate-y-10 lg:rotate-[1.6deg]",
-    aspect: "aspect-[4/5] lg:aspect-[6/5]",
+    aspect: "aspect-[5/6] sm:aspect-[4/5] lg:aspect-[6/5]",
     imageSrc: "/assets/cute-baby-born.jpg",
     imageAlt: "Kerala naming ceremony baby welcome image",
     objectPosition: "object-center",
@@ -94,22 +94,22 @@ export default async function GalleryPage({
     <main className="min-h-screen overflow-hidden bg-[linear-gradient(180deg,#f8f1e8_0%,#f5ede3_34%,#f1e7db_68%,#efe4d6_100%)] px-4 py-6 sm:px-6 lg:px-8">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.48),transparent_28%),radial-gradient(circle_at_bottom,rgba(255,255,255,0.22),transparent_24%)]" />
       <div className="mx-auto max-w-[1120px] space-y-8">
-        <section className="relative overflow-hidden rounded-[34px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(248,241,233,0.98))] px-6 py-10 text-center shadow-[0_24px_70px_rgba(113,126,108,0.12)] sm:px-8 lg:px-12">
+        <section className="relative overflow-hidden rounded-[30px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.94),rgba(248,241,233,0.98))] px-4 py-8 text-center shadow-[0_24px_70px_rgba(113,126,108,0.12)] sm:rounded-[34px] sm:px-8 sm:py-10 lg:px-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.48),transparent_72%)]" />
-          <p className="text-[12px] uppercase tracking-[0.32em] text-[var(--color-sage-strong)]">
+          <p className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-sage-strong)] sm:text-[12px] sm:tracking-[0.32em]">
             Ceremony Moodboard
           </p>
-          <h1 className="mt-3 font-serif text-[3rem] leading-none text-[var(--color-forest)] sm:text-[4rem]">
+          <h1 className="mt-3 font-serif text-[2.25rem] leading-none text-[var(--color-forest)] sm:text-[4rem]">
             Kerala Traditions, Softly Framed
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-8 text-stone-700">
+          <p className="mx-auto mt-3 max-w-2xl text-[15px] leading-7 text-stone-700 sm:mt-4 sm:text-[17px] sm:leading-8">
             A curated collection of motifs, tones, and ceremonial details adapted
             for Baby Name&apos;s Noolukettu invitation.
           </p>
           <div className="mt-7 flex justify-center">
             <Link
               href={inviteHref}
-              className="inline-flex items-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[linear-gradient(180deg,rgba(247,245,240,0.94),rgba(230,234,224,0.9))] px-8 py-3.5 text-[11px] uppercase tracking-[0.28em] text-[var(--color-forest)] shadow-[0_12px_26px_rgba(122,130,114,0.14)] transition duration-300 hover:-translate-y-0.5"
+              className="inline-flex min-h-11 items-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[linear-gradient(180deg,rgba(247,245,240,0.94),rgba(230,234,224,0.9))] px-6 py-3 text-[10px] uppercase tracking-[0.18em] text-[var(--color-forest)] shadow-[0_12px_26px_rgba(122,130,114,0.14)] transition duration-300 hover:-translate-y-0.5 sm:px-8 sm:py-3.5 sm:text-[11px] sm:tracking-[0.28em]"
             >
               Back to Invitation
             </Link>
@@ -124,7 +124,7 @@ export default async function GalleryPage({
           {galleryCards.map((card, index) => (
             <article
               key={card.title}
-              className={`group relative overflow-hidden rounded-[34px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(247,241,234,0.44))] p-2 shadow-[0_18px_44px_rgba(113,126,108,0.1)] transition duration-500 hover:-translate-y-1 hover:rotate-0 hover:shadow-[0_24px_54px_rgba(113,126,108,0.16)] ${card.className}`}
+              className={`group relative overflow-hidden rounded-[28px] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(247,241,234,0.44))] p-2 shadow-[0_18px_44px_rgba(113,126,108,0.1)] transition duration-500 hover:-translate-y-1 hover:rotate-0 hover:shadow-[0_24px_54px_rgba(113,126,108,0.16)] sm:rounded-[34px] ${card.className}`}
             >
               <div
                 className={`pointer-events-none absolute inset-0 rounded-[34px] opacity-0 transition duration-500 group-hover:opacity-100 ${
@@ -135,7 +135,7 @@ export default async function GalleryPage({
               />
 
               <div
-                className={`relative overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(242,232,219,0.7))] ${card.aspect}`}
+                className={`relative overflow-hidden rounded-[22px] bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(242,232,219,0.7))] sm:rounded-[28px] ${card.aspect}`}
               >
                 <Image
                   src={card.imageSrc}
@@ -147,11 +147,11 @@ export default async function GalleryPage({
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(45,58,47,0.1)_48%,rgba(39,49,43,0.76)_100%)]" />
                 <div className="pointer-events-none absolute inset-x-[18%] bottom-0 top-[24%] rounded-t-[220px] border border-[var(--color-baby-gold)]/18 border-b-0" />
 
-                <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-7">
-                  <h2 className="font-serif text-[2rem] leading-none sm:text-[2.4rem]">
+                <div className="absolute inset-x-0 bottom-0 p-4 text-white sm:p-7">
+                  <h2 className="font-serif text-[1.6rem] leading-none sm:text-[2.4rem]">
                     {card.title}
                   </h2>
-                  <p className="mt-4 max-w-[300px] text-[15px] leading-7 text-white/88">
+                  <p className="mt-3 max-w-[300px] text-[13px] leading-6 text-white/88 sm:mt-4 sm:text-[15px] sm:leading-7">
                     {card.body}
                   </p>
                 </div>

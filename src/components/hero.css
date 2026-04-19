@@ -279,6 +279,10 @@
     padding: 26px;
   }
 
+  .hero-screen__panel {
+    width: min(100%, 560px);
+  }
+
   .hero-screen__float-card {
     display: none;
   }
@@ -368,5 +372,102 @@
     padding: 12px 18px;
     font-size: 11px;
     letter-spacing: 0.14em;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-screen {
+    min-height: auto;
+    border-radius: 24px;
+  }
+
+  .hero-screen__bg-image {
+    object-position: 64% center;
+  }
+
+  .hero-screen__bg-glow--one {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-screen__bg-glow--two {
+    right: -8%;
+    bottom: 10%;
+    width: 210px;
+    height: 160px;
+  }
+
+  .hero-screen__layout {
+    padding: 14px;
+    min-height: 100%;
+  }
+
+  .hero-screen__panel {
+    padding: 18px 14px 16px;
+    border-radius: 20px;
+  }
+
+  .hero-screen__guest {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-screen__kicker {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-screen__eyebrow {
+    font-size: 2.15rem;
+  }
+
+  .hero-screen__title {
+    margin-top: 12px;
+    gap: 6px;
+    font-size: 1.84rem;
+  }
+
+  .hero-screen__lead {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .hero-screen__divider {
+    margin-top: 14px;
+    width: min(100%, 190px);
+    gap: 10px;
+  }
+
+  .hero-screen__meta-grid {
+    margin-top: 14px;
+    gap: 10px;
+  }
+
+  .hero-screen__meta-card {
+    padding: 11px 12px;
+    border-radius: 16px;
+  }
+
+  .hero-screen__meta-label {
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .hero-screen__meta-value {
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .hero-screen__meta-subvalue {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .hero-screen__button {
+    margin-top: 16px;
+    padding: 11px 16px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
   }
 }

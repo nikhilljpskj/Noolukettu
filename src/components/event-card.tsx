@@ -92,33 +92,33 @@ export function EventCard({ event, variant }: EventCardProps) {
 
         {isCeremony ? (
           <div className="relative grid overflow-hidden lg:grid-cols-[1.08fr_0.92fr]">
-            <div className="relative px-6 pb-8 pt-8 text-center sm:px-8 sm:pb-9 sm:pt-9 lg:px-12 lg:pb-10 lg:pt-10">
-              <p className="font-script text-[3rem] leading-none text-[var(--color-forest)]/88 sm:text-[3.4rem]">
+            <div className="relative px-5 pb-7 pt-7 text-center sm:px-8 sm:pb-9 sm:pt-9 lg:px-12 lg:pb-10 lg:pt-10">
+              <p className="font-script text-[2.5rem] leading-none text-[var(--color-forest)]/88 sm:text-[3.4rem]">
                 {event.title}
               </p>
 
-              <p className="mt-4 text-[10px] uppercase tracking-[0.28em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.34em]">
+              <p className="mt-3 text-[9px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)] sm:mt-4 sm:text-[11px] sm:tracking-[0.34em]">
                 {event.subtitle}
               </p>
 
-              <h3 className="mt-3 font-serif text-[2.45rem] leading-[0.95] text-[var(--color-forest)] sm:text-[3.35rem] lg:text-[4.15rem]">
+              <h3 className="mt-3 font-serif text-[2rem] leading-[0.98] text-[var(--color-forest)] sm:text-[3.35rem] lg:text-[4.15rem]">
                 {event.names}
               </h3>
 
               <DividerHeart />
 
-              <div className="mx-auto max-w-[290px] space-y-1 text-[14px] leading-[1.5] text-[var(--color-forest)]/84 sm:max-w-[310px] sm:text-[16px] lg:text-[17px]">
+              <div className="mx-auto max-w-[300px] space-y-1 text-[13px] leading-6 text-[var(--color-forest)]/84 sm:max-w-[310px] sm:text-[16px] sm:leading-[1.5] lg:text-[17px]">
                 {event.bodyLines.map((line, idx) => (
                   <p key={idx}>{line}</p>
                 ))}
               </div>
 
-              <div className="mt-6 flex justify-center">
+              <div className="mt-5 flex justify-center sm:mt-6">
                 <MotifBadge motif="lotus" className="h-14 w-14" />
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center border-t border-[var(--color-sage-strong)]/10 px-6 py-8 sm:px-8 sm:py-9 lg:border-l lg:border-t-0 lg:px-12 lg:py-10">
+            <div className="relative flex items-center justify-center border-t border-[var(--color-sage-strong)]/10 px-5 py-7 sm:px-8 sm:py-9 lg:border-l lg:border-t-0 lg:px-12 lg:py-10">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(255,255,255,0.94),transparent_32%),radial-gradient(circle_at_center,rgba(255,255,255,0.82),rgba(255,255,255,0)_62%),radial-gradient(circle_at_bottom_left,rgba(255,255,255,0.5),transparent_34%)]" />
               <div className="absolute -left-[18%] top-[-4%] h-[118%] w-[78%] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.96),rgba(255,255,255,0.36)_48%,transparent_74%)] blur-[22px]" />
               <div className="absolute left-[-10%] top-[42%] h-[42%] w-[66%] -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.92)_0%,rgba(255,255,255,0.34)_50%,transparent_78%)] blur-[26px]" />
@@ -126,7 +126,7 @@ export function EventCard({ event, variant }: EventCardProps) {
               <div className="relative flex w-full max-w-sm flex-col items-center text-center">
                 <VenueIllustration variant={variant} />
 
-                <div className="relative mt-5 h-36 w-full overflow-hidden rounded-[24px] border border-white/70 shadow-[0_14px_28px_rgba(113,126,108,0.12)] sm:h-40">
+                <div className="relative mt-4 h-32 w-full overflow-hidden rounded-[22px] border border-white/70 shadow-[0_14px_28px_rgba(113,126,108,0.12)] sm:mt-5 sm:h-40 sm:rounded-[24px]">
                   <Image
                     src={event.imageSrc}
                     alt={event.imageAlt}
@@ -137,20 +137,20 @@ export function EventCard({ event, variant }: EventCardProps) {
                   <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,244,236,0.12),rgba(78,105,97,0.14))]" />
                 </div>
 
-                <h4 className="mt-5 font-serif text-[2rem] uppercase tracking-[0.04em] text-[var(--color-forest)] sm:text-[2.45rem] lg:text-[2.8rem]">
+                <h4 className="mt-4 font-serif text-[1.65rem] uppercase tracking-[0.03em] text-[var(--color-forest)] sm:mt-5 sm:text-[2.45rem] lg:text-[2.8rem]">
                   {event.venue}
                 </h4>
 
-                <p className="mt-1 font-serif text-[1.4rem] italic text-[var(--color-forest)]/72 sm:text-[1.65rem] lg:text-[1.85rem]">
+                <p className="mt-1 font-serif text-[1.05rem] italic text-[var(--color-forest)]/72 sm:text-[1.65rem] lg:text-[1.85rem]">
                   {event.locationLabel}
                 </p>
 
-                <div className="mt-6 flex w-full max-w-[280px] flex-col gap-3">
+                <div className="mt-5 flex w-full max-w-[280px] flex-col gap-3 sm:mt-6">
                   <a
                     href={event.mapUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-[var(--color-sage-strong)]/20 bg-[linear-gradient(180deg,rgba(246,246,241,0.96),rgba(234,236,228,0.9))] px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+                    className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/20 bg-[linear-gradient(180deg,rgba(246,246,241,0.96),rgba(234,236,228,0.9))] px-5 py-3 text-[10px] uppercase tracking-[0.16em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5 sm:px-6 sm:text-[12px] sm:tracking-[0.18em]"
                   >
                     <LocationPinIcon />
                     View Venue
@@ -161,7 +161,7 @@ export function EventCard({ event, variant }: EventCardProps) {
                       href={event.calendarUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center justify-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/90 px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+                      className="inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/90 px-5 py-3 text-[10px] uppercase tracking-[0.16em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5 sm:px-6 sm:text-[12px] sm:tracking-[0.18em]"
                     >
                       <CalendarIcon />
                       Add to Calendar
@@ -172,7 +172,7 @@ export function EventCard({ event, variant }: EventCardProps) {
               </div>
             </div>
 
-            <div className="relative border-t border-[var(--color-sage-strong)]/10 px-4 py-5 sm:px-6 sm:py-6 lg:col-span-2">
+            <div className="relative border-t border-[var(--color-sage-strong)]/10 px-3 py-4 sm:px-6 sm:py-6 lg:col-span-2">
               <div className="mx-auto w-full max-w-[420px]">
                 <CountdownTimer targetIso={event.isoDate} title={`${event.title} Countdown`} />
               </div>
@@ -180,54 +180,54 @@ export function EventCard({ event, variant }: EventCardProps) {
           </div>
         ) : (
           <div className="grid lg:grid-cols-[1fr_210px_1fr]">
-            <div className="px-6 py-8 text-center sm:px-8 sm:py-9 lg:px-12 lg:py-10">
-              <p className="font-script text-[3rem] leading-none text-[var(--color-forest)]/88 sm:text-[3.4rem]">
+            <div className="px-5 py-7 text-center sm:px-8 sm:py-9 lg:px-12 lg:py-10">
+              <p className="font-script text-[2.5rem] leading-none text-[var(--color-forest)]/88 sm:text-[3.4rem]">
                 {event.title}
               </p>
 
-              <p className="mx-auto mt-4 max-w-md text-[10px] uppercase tracking-[0.28em] text-[var(--color-sage-strong)] sm:text-[11px] sm:tracking-[0.34em]">
+              <p className="mx-auto mt-3 max-w-md text-[9px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)] sm:mt-4 sm:text-[11px] sm:tracking-[0.34em]">
                 {event.subtitle}
               </p>
 
               {isHostingLine ? (
                 <div className="mt-4">
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]/82 sm:text-[11px]">
+                  <p className="text-[9px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)]/82 sm:text-[11px] sm:tracking-[0.3em]">
                     Hosted By
                   </p>
-                  <h3 className="mt-3 font-serif text-[1.5rem] leading-[1.2] text-[var(--color-forest)] sm:text-[1.8rem] lg:text-[2rem]">
+                  <h3 className="mt-2.5 font-serif text-[1.35rem] leading-[1.25] text-[var(--color-forest)] sm:mt-3 sm:text-[1.8rem] lg:text-[2rem]">
                     {hostingNames}
                   </h3>
                 </div>
               ) : (
-                <h3 className="mt-4 font-serif text-[2.45rem] leading-[0.95] text-[var(--color-forest)] sm:text-[3.35rem] lg:text-[4.15rem]">
+                <h3 className="mt-4 font-serif text-[2rem] leading-[0.98] text-[var(--color-forest)] sm:text-[3.35rem] lg:text-[4.15rem]">
                   {event.names}
                 </h3>
               )}
 
               <DividerHeart />
 
-              <div className="mx-auto max-w-[420px] space-y-3 text-[14px] leading-7 text-[var(--color-forest)]/82 sm:text-[15px]">
+              <div className="mx-auto max-w-[420px] space-y-3 text-[13px] leading-6 text-[var(--color-forest)]/82 sm:text-[15px] sm:leading-7">
                 {event.bodyLines.map((line, idx) => (
                   <p key={idx}>{line}</p>
                 ))}
               </div>
 
-              <div className="mt-6 flex flex-wrap justify-center gap-2">
+              <div className="mt-5 flex flex-wrap justify-center gap-2 sm:mt-6">
                 {receptionHighlights.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-[var(--color-sage-strong)]/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(245,239,231,0.86))] px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)]"
+                    className="rounded-full border border-[var(--color-sage-strong)]/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(245,239,231,0.86))] px-3 py-2 text-[9px] uppercase tracking-[0.14em] text-[var(--color-sage-strong)] sm:px-4 sm:text-[10px] sm:tracking-[0.22em]"
                   >
                     {item}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-6 rounded-[22px] border border-[var(--color-sage-strong)]/10 bg-[linear-gradient(180deg,rgba(248,245,240,0.92),rgba(241,235,226,0.88))] px-5 py-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.72)]">
-                <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--color-sage-strong)]">
+              <div className="mt-5 rounded-[20px] border border-[var(--color-sage-strong)]/10 bg-[linear-gradient(180deg,rgba(248,245,240,0.92),rgba(241,235,226,0.88))] px-4 py-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.72)] sm:mt-6 sm:rounded-[22px] sm:px-5">
+                <p className="text-[9px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)] sm:text-[10px] sm:tracking-[0.28em]">
                   Gathering Note
                 </p>
-                <p className="mt-3 text-[14px] leading-7 text-stone-600 sm:text-[15px]">
+                <p className="mt-3 text-[13px] leading-6 text-stone-600 sm:text-[15px] sm:leading-7">
                   After the naming ritual, please stay with us for blessings,
                   warm introductions, and lunch shared together in the comfort of
                   home.
@@ -235,17 +235,17 @@ export function EventCard({ event, variant }: EventCardProps) {
               </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center border-y border-[var(--color-sage-strong)]/10 bg-[linear-gradient(180deg,rgba(244,245,239,0.85),rgba(250,246,240,0.92))] px-6 py-8 text-center sm:px-8 sm:py-9 lg:border-x lg:border-y-0">
-              <p className="text-[12px] uppercase tracking-[0.28em] text-[var(--color-teal-strong)] sm:text-[14px] sm:tracking-[0.34em]">
+            <div className="flex flex-col items-center justify-center border-y border-[var(--color-sage-strong)]/10 bg-[linear-gradient(180deg,rgba(244,245,239,0.85),rgba(250,246,240,0.92))] px-4 py-6 text-center sm:px-8 sm:py-9 lg:border-x lg:border-y-0">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[var(--color-teal-strong)] sm:text-[14px] sm:tracking-[0.34em]">
                 {event.monthLabel}
               </p>
-              <p className="mt-2 font-serif text-[4.2rem] leading-none text-[var(--color-forest)] sm:text-[5.4rem]">
+              <p className="mt-1.5 font-serif text-[3.2rem] leading-none text-[var(--color-forest)] sm:mt-2 sm:text-[5.4rem]">
                 {event.dayLabel}
               </p>
-              <p className="mt-1 text-[15px] uppercase tracking-[0.18em] text-[var(--color-teal-strong)] sm:text-[18px] sm:tracking-[0.22em]">
+              <p className="mt-1 text-[12px] uppercase tracking-[0.14em] text-[var(--color-teal-strong)] sm:text-[18px] sm:tracking-[0.22em]">
                 {event.yearLabel}
               </p>
-              <p className="mt-5 text-[12px] uppercase leading-7 tracking-[0.18em] text-[var(--color-forest)] sm:text-[14px] sm:leading-8 sm:tracking-[0.24em]">
+              <p className="mt-4 text-[10px] uppercase leading-6 tracking-[0.12em] text-[var(--color-forest)] sm:mt-5 sm:text-[14px] sm:leading-8 sm:tracking-[0.24em]">
                 {event.timeSummaryLines.map((line) => (
                   <span key={line}>
                     {line}
@@ -255,10 +255,10 @@ export function EventCard({ event, variant }: EventCardProps) {
               </p>
             </div>
 
-            <div className="flex flex-col items-center justify-center px-6 py-8 text-center sm:px-8 sm:py-9 lg:px-12 lg:py-10">
+            <div className="flex flex-col items-center justify-center px-5 py-7 text-center sm:px-8 sm:py-9 lg:px-12 lg:py-10">
               <VenueIllustration variant={variant} />
 
-              <div className="relative mt-5 h-36 w-full max-w-[280px] overflow-hidden rounded-[24px] border border-white/70 shadow-[0_14px_28px_rgba(113,126,108,0.12)] sm:h-40">
+              <div className="relative mt-4 h-32 w-full max-w-[280px] overflow-hidden rounded-[22px] border border-white/70 shadow-[0_14px_28px_rgba(113,126,108,0.12)] sm:mt-5 sm:h-40 sm:rounded-[24px]">
                 <Image
                   src={event.imageSrc}
                   alt={event.imageAlt}
@@ -269,15 +269,15 @@ export function EventCard({ event, variant }: EventCardProps) {
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,244,236,0.12),rgba(78,105,97,0.14))]" />
               </div>
 
-              <h4 className="mt-5 font-serif text-[2.1rem] uppercase tracking-[0.04em] text-[var(--color-forest)] sm:text-[2.6rem] lg:text-[3.1rem]">
+              <h4 className="mt-4 font-serif text-[1.7rem] uppercase tracking-[0.03em] text-[var(--color-forest)] sm:mt-5 sm:text-[2.6rem] lg:text-[3.1rem]">
                 {event.venue}
               </h4>
 
-              <p className="mt-1 font-serif text-[1.45rem] italic text-[var(--color-forest)]/72 sm:text-[1.7rem] lg:text-[1.9rem]">
+              <p className="mt-1 font-serif text-[1.05rem] italic text-[var(--color-forest)]/72 sm:text-[1.7rem] lg:text-[1.9rem]">
                 {event.locationLabel}
               </p>
 
-              <p className="mt-3 max-w-[260px] text-[14px] leading-[1.5] text-stone-600 sm:text-[16px] lg:text-[17px]">
+              <p className="mt-3 max-w-[260px] text-[13px] leading-6 text-stone-600 sm:text-[16px] sm:leading-[1.5] lg:text-[17px]">
                 {event.address}
               </p>
 
@@ -285,13 +285,13 @@ export function EventCard({ event, variant }: EventCardProps) {
                 href={event.mapUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-7 inline-flex items-center justify-center rounded-full border border-[var(--color-sage-strong)]/20 bg-[linear-gradient(180deg,rgba(246,246,241,0.96),rgba(234,236,228,0.9))] px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+                className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/20 bg-[linear-gradient(180deg,rgba(246,246,241,0.96),rgba(234,236,228,0.9))] px-5 py-3 text-[10px] uppercase tracking-[0.16em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5 sm:mt-7 sm:px-6 sm:text-[12px] sm:tracking-[0.18em]"
               >
                 View Venue
               </a>
             </div>
 
-            <div className="border-t border-[var(--color-sage-strong)]/10 px-4 py-5 sm:px-6 sm:py-6 lg:col-span-3">
+            <div className="border-t border-[var(--color-sage-strong)]/10 px-3 py-4 sm:px-6 sm:py-6 lg:col-span-3">
               <div className="mx-auto w-full max-w-[420px]">
                 <CountdownTimer
                   targetIso={event.isoDate}
