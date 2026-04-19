@@ -79,6 +79,11 @@ export function EventCard({ event, variant }: EventCardProps) {
   const hostingNames = isHostingLine
     ? event.names.replace(/^Hosted by\s+/i, "")
     : event.names;
+  const receptionHighlights = [
+    "Family blessings",
+    "Introductions",
+    "Lunch to follow",
+  ];
 
   return (
     <section className="fade-in-section" id={event.key}>
@@ -200,6 +205,34 @@ export function EventCard({ event, variant }: EventCardProps) {
               )}
 
               <DividerHeart />
+
+              <div className="mx-auto max-w-[420px] space-y-3 text-[14px] leading-7 text-[var(--color-forest)]/82 sm:text-[15px]">
+                {event.bodyLines.map((line, idx) => (
+                  <p key={idx}>{line}</p>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-wrap justify-center gap-2">
+                {receptionHighlights.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-[var(--color-sage-strong)]/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(245,239,231,0.86))] px-4 py-2 text-[10px] uppercase tracking-[0.22em] text-[var(--color-sage-strong)]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-[22px] border border-[var(--color-sage-strong)]/10 bg-[linear-gradient(180deg,rgba(248,245,240,0.92),rgba(241,235,226,0.88))] px-5 py-4 text-left shadow-[inset_0_1px_0_rgba(255,255,255,0.72)]">
+                <p className="text-[10px] uppercase tracking-[0.28em] text-[var(--color-sage-strong)]">
+                  Gathering Note
+                </p>
+                <p className="mt-3 text-[14px] leading-7 text-stone-600 sm:text-[15px]">
+                  After the naming ritual, please stay with us for blessings,
+                  warm introductions, and lunch shared together in the comfort of
+                  home.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-col items-center justify-center border-y border-[var(--color-sage-strong)]/10 bg-[linear-gradient(180deg,rgba(244,245,239,0.85),rgba(250,246,240,0.92))] px-6 py-8 text-center sm:px-8 sm:py-9 lg:border-x lg:border-y-0">

@@ -79,6 +79,60 @@ function FeatureTiles({ guestName }: { guestName: string }) {
   );
 }
 
+function InvitationNavigation({ guestName }: { guestName: string }) {
+  const galleryHref = guestName
+    ? `/gallery?guest=${encodeURIComponent(guestName)}`
+    : "/gallery";
+  const storyHref = guestName
+    ? `/our-story?guest=${encodeURIComponent(guestName)}`
+    : "/our-story";
+
+  const links = [
+    { label: "Ceremony", href: "#ceremony" },
+    { label: "Blessings & Lunch", href: "#reception" },
+    { label: "Gallery", href: galleryHref, external: false },
+    { label: "Blessing Note", href: storyHref, external: false },
+    { label: "RSVP", href: "#rsvp" },
+  ];
+
+  return (
+    <section className="rounded-[26px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(248,243,237,0.96))] px-5 py-5 shadow-[0_18px_42px_rgba(113,126,108,0.08)] sm:px-6">
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+        <div>
+          <p className="text-[11px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]">
+            Explore The Invitation
+          </p>
+          <p className="mt-2 text-[15px] leading-7 text-stone-600">
+            Move between the ceremony details, gallery, blessing note, and RSVP.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {links.map((link) =>
+            link.href.startsWith("#") ? (
+              <a
+                key={link.label}
+                href={link.href}
+                className="inline-flex items-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/88 px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+              >
+                {link.label}
+              </a>
+            ) : (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="inline-flex items-center rounded-full border border-[var(--color-sage-strong)]/14 bg-white/88 px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-[var(--color-forest)] transition duration-300 hover:-translate-y-0.5"
+              >
+                {link.label}
+              </Link>
+            ),
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function InvitationApp() {
   const searchParams = useSearchParams();
   const guestName = searchParams.get("guest")?.trim() ?? "";
@@ -94,6 +148,7 @@ export function InvitationApp() {
         </section>
 
         <section className="space-y-4" id="events">
+          <InvitationNavigation guestName={guestName} />
           <EventCard
             event={invitationData.events.ceremony}
             variant="ceremony"
