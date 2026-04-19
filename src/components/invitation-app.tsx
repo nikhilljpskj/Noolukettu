@@ -19,7 +19,7 @@ function FeatureTiles({ guestName }: { guestName: string }) {
   const items = [
     {
       title: "Blessing Note",
-      body: "A quiet page for the meaning behind Aarav's naming day",
+      body: "A quiet page for the meaning behind Baby Name's naming day",
       icon: "\u273F",
       href: storyHref,
     },
@@ -36,7 +36,7 @@ function FeatureTiles({ guestName }: { guestName: string }) {
     },
     {
       title: "RSVP",
-      body: "Kindly confirm your presence with Nikhil or Anjana",
+      body: "Share your name and blessings with the family",
       icon: "\u2709",
     },
   ];

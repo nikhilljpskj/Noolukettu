@@ -105,7 +105,7 @@ export default async function GalleryPage({
             Kerala Traditions, Softly Framed
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-[17px] leading-8 text-stone-700">
-            A curated collection of motifs, tones, and ceremonial details adapted for Aarav Krishna&apos;s Noolukettu invitation.
+            A curated collection of motifs, tones, and ceremonial details adapted for Baby Name&apos;s Noolukettu invitation.
           </p>
           <div className="mt-7 flex justify-center">
             <Link

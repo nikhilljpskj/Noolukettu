@@ -1,6 +1,6 @@
 "use client";
 
-import { Great_Vibes, Cormorant_Garamond } from "next/font/google";
+import Image from "next/image";
 import {
   CradleIcon,
   LotusDividerIcon,
@@ -9,13 +9,6 @@ import {
 } from "@/components/ceremony-motifs";
 import { invitationData } from "@/lib/invitation-data";
 import "./hero.css";
-
-const greatVibes = Great_Vibes({ subsets: ["latin"], weight: "400" });
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-});
 
 type HeroSectionProps = {
   guestName: string;
@@ -58,22 +51,14 @@ export default function HeroSection({ guestName }: HeroSectionProps) {
 
       <div className="hero-screen__content">
         {guestName ? (
-          <p className={`hero-screen__guest ${cormorant.className}`}>
-            Invitation for {guestName}
-          </p>
+          <p className="hero-screen__guest font-serif">Invitation for {guestName}</p>
         ) : null}
 
-        <p className={`hero-screen__eyebrow ${greatVibes.className}`}>
-          {invitationData.intro}
-        </p>
+        <p className="hero-screen__eyebrow font-script">{invitationData.intro}</p>
 
-        <p className={`hero-screen__subtitle ${cormorant.className}`}>
-          {invitationData.heroLine}
-        </p>
+        <p className="hero-screen__subtitle font-serif">{invitationData.heroLine}</p>
 
-        <h1 className={`hero-screen__title ${cormorant.className}`}>
-          {invitationData.babyName}
-        </h1>
+        <h1 className="hero-screen__title font-serif">{invitationData.babyName}</h1>
 
         <div className="hero-screen__divider" aria-hidden="true">
           <span className="hero-screen__divider-line" />
@@ -81,21 +66,34 @@ export default function HeroSection({ guestName }: HeroSectionProps) {
           <span className="hero-screen__divider-line" />
         </div>
 
-        <p className={`hero-screen__date ${cormorant.className}`}>
+        <p className="hero-screen__date font-serif">
           {ceremony.title}
-          <span className="hero-screen__date-separator">•</span>
+          <span className="hero-screen__date-separator">&middot;</span>
           {invitationData.heroDateLine}
         </p>
 
-        <p className={`hero-screen__venue ${cormorant.className}`}>
+        <p className="hero-screen__venue font-serif">
           Hosted by {invitationData.parents} with {invitationData.grandparents}
           <br />
           at {invitationData.heroVenueLine}
         </p>
 
+        <div className="hero-screen__portrait">
+          <div className="hero-screen__portrait-frame">
+            <Image
+              src={invitationData.heroImageSrc}
+              alt={invitationData.heroImageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 767px) 144px, 184px"
+              priority
+            />
+          </div>
+        </div>
+
         <button
           type="button"
-          className={`hero-screen__button ${cormorant.className}`}
+          className="hero-screen__button font-serif"
           onClick={handleOpenInvitation}
         >
           View Invitation

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CountdownTimer } from "@/components/countdown-timer";
 import {
   CradleIcon,
@@ -115,6 +116,17 @@ export function EventCard({ event, variant }: EventCardProps) {
               <div className="relative flex w-full max-w-sm flex-col items-center text-center">
                 <VenueIllustration variant={variant} />
 
+                <div className="relative mt-5 h-36 w-full overflow-hidden rounded-[24px] border border-white/70 shadow-[0_14px_28px_rgba(113,126,108,0.12)] sm:h-40">
+                  <Image
+                    src={event.imageSrc}
+                    alt={event.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1023px) 320px, 360px"
+                  />
+                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,244,236,0.12),rgba(78,105,97,0.14))]" />
+                </div>
+
                 <h4 className="mt-5 font-serif text-[2rem] uppercase tracking-[0.04em] text-[var(--color-forest)] sm:text-[2.45rem] lg:text-[2.8rem]">
                   {event.venue}
                 </h4>
@@ -196,6 +208,17 @@ export function EventCard({ event, variant }: EventCardProps) {
 
             <div className="flex flex-col items-center justify-center px-6 py-8 text-center sm:px-8 sm:py-9 lg:px-12 lg:py-10">
               <VenueIllustration variant={variant} />
+
+              <div className="relative mt-5 h-36 w-full max-w-[280px] overflow-hidden rounded-[24px] border border-white/70 shadow-[0_14px_28px_rgba(113,126,108,0.12)] sm:h-40">
+                <Image
+                  src={event.imageSrc}
+                  alt={event.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1023px) 280px, 320px"
+                />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(250,244,236,0.12),rgba(78,105,97,0.14))]" />
+              </div>
 
               <h4 className="mt-5 font-serif text-[2.1rem] uppercase tracking-[0.04em] text-[var(--color-forest)] sm:text-[2.6rem] lg:text-[3.1rem]">
                 {event.venue}

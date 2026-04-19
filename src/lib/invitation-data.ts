@@ -16,75 +16,82 @@ export type EventConfig = {
   dayLabel: string;
   yearLabel: string;
   timeSummaryLines: string[];
+  imageSrc: string;
+  imageAlt: string;
 };
 
-export const pabblyWebhookUrl =
-  "https://connect.pabbly.com/webhook-listener/webhook/IjU3NjIwNTY1MDYzMDA0MzE1MjY5NTUzZCI_3D_pc/IjU3NjcwNTZmMDYzZjA0M2M1MjY5NTUzMTUxMzEi_pc";
+export const googleSheetEndpointUrl =
+  "https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec";
 
 export const invitationData = {
-  intro: "With love and blessings",
-  heroLine:
-    "we invite you to the Noolukettu ceremony of our beloved baby",
-  babyName: "Aarav Krishna",
-  parents: "Nikhil & Anjana",
-  grandparents: "Raghavan & Sreedevi",
-  heroDateLine: "Sunday, 18th October 2026  •  10:30 AM onwards",
-  heroVenueLine: "Sreelakshmi Illam, Pathanamthitta",
+  intro: "With prayers and love",
+  heroLine: "we invite you to the 28th day naming ceremony of our little one",
+  babyName: "Baby Name",
+  parents: "Parent Name 1 & Parent Name 2",
+  grandparents: "Grandparent Name 1 & Grandparent Name 2",
+  heroDateLine: "Sunday 18 October 2026  •  10:30 AM onwards",
+  heroVenueLine: "House Name, Street Name, Area Name, City, Kerala 689000",
+  heroImageSrc: "/assets/cute-baby-born.jpg",
+  heroImageAlt: "Soft baby portrait for the naming ceremony invitation",
   events: {
     ceremony: {
       key: "ceremony",
-      title: "Noolukettu Ceremony",
+      title: "Noolukettu",
       subtitle: "28th Day Naming Ceremony",
-      names: "Aarav Krishna",
+      names: "Baby Name",
       bodyLines: [
-        "With love and blessings, we invite you to celebrate",
-        "the naming ceremony of our beloved baby",
-        "in the warmth of family, tradition, and prayer.",
+        "With hearts full of gratitude, we invite you to gather",
+        "for the naming and blessing ceremony of our beloved baby",
+        "amid prayer, family warmth, and Kerala tradition.",
       ],
-      dateLabel: "Sunday, 18th October 2026",
+      dateLabel: "Sunday 18 October 2026",
       timeLabel: "10:30 AM onwards",
-      venue: "Sreelakshmi Illam",
-      locationLabel: "Near Temple Road, Pathanamthitta",
-      address: "Sreelakshmi Illam, Near Temple Road, Pathanamthitta, Kerala",
+      venue: "House Name",
+      locationLabel: "Street Name, Area Name",
+      address: "House Name, Street Name, Area Name, City, Kerala 689000",
       mapUrl:
-        "https://maps.google.com/?q=Sreelakshmi%20Illam%20Near%20Temple%20Road%20Pathanamthitta%20Kerala",
+        "https://maps.google.com/?q=House%20Name%20Street%20Name%20Area%20Name%20City%20Kerala%20689000",
       calendarUrl:
-        "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Aarav+Krishna+Noolukettu+Ceremony&dates=20261018T050000Z/20261018T073000Z&details=With+love+and+blessings%2C+we+invite+you+to+the+Noolukettu+ceremony+of+Aarav+Krishna.&location=Sreelakshmi+Illam%2C+Near+Temple+Road%2C+Pathanamthitta%2C+Kerala",
+        "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Baby+Name+Noolukettu&dates=20261018T050000Z/20261018T073000Z&details=Please+join+us+for+the+28th+day+naming+ceremony+of+Baby+Name.&location=House+Name%2C+Street+Name%2C+Area+Name%2C+City%2C+Kerala+689000",
       isoDate: "2026-10-18T10:30:00+05:30",
       monthLabel: "October",
       dayLabel: "18",
       yearLabel: "2026",
       timeSummaryLines: ["At ten-thirty", "in the", "morning"],
+      imageSrc: "/assets/baby5.jpg",
+      imageAlt: "Baby details styled for the naming ceremony card",
     } satisfies EventConfig,
     reception: {
       key: "reception",
-      title: "Blessings & Gathering",
+      title: "Blessings & Lunch",
       subtitle:
-        "Please join the family for prayers, blessings, and lunch after the naming",
-      names: "Hosted by Nikhil & Anjana",
+        "Please stay with us for family blessings, introductions, and lunch after the naming ritual",
+      names: "Hosted by Parent Name 1 & Parent Name 2",
       bodyLines: [
         "In the loving presence of",
-        "Raghavan & Sreedevi,",
-        "we look forward to sharing this precious day with you.",
+        "Grandparent Name 1 & Grandparent Name 2,",
+        "we look forward to sharing this precious milestone with you.",
       ],
-      dateLabel: "Sunday, 18th October 2026",
+      dateLabel: "Sunday 18 October 2026",
       timeLabel: "Following the ceremony",
-      venue: "Sreelakshmi Illam",
-      locationLabel: "Pathanamthitta, Kerala",
-      address: "Near Temple Road, Pathanamthitta, Kerala",
+      venue: "House Name",
+      locationLabel: "City, Kerala",
+      address: "House Name, Street Name, Area Name, City, Kerala 689000",
       mapUrl:
-        "https://maps.google.com/?q=Sreelakshmi%20Illam%20Near%20Temple%20Road%20Pathanamthitta%20Kerala",
+        "https://maps.google.com/?q=House%20Name%20Street%20Name%20Area%20Name%20City%20Kerala%20689000",
       isoDate: "2026-10-18T12:00:00+05:30",
       monthLabel: "October",
       dayLabel: "18",
       yearLabel: "2026",
       timeSummaryLines: ["Family blessings", "and lunch", "to follow"],
+      imageSrc: "/assets/baby2.jpg",
+      imageAlt: "Elegant baby-themed styling for the blessing gathering card",
     } satisfies EventConfig,
   },
   infoCards: [
     {
       title: "Blessing Note",
-      body: "A tender note for Aarav's naming day",
+      body: "A tender note for Baby Name's naming day",
       icon: "lotus",
     },
     {
@@ -98,8 +105,8 @@ export const invitationData = {
       icon: "lamp",
     },
     {
-      title: "RSVP",
-      body: "Kindly confirm your presence with the family",
+      title: "Blessing RSVP",
+      body: "Kindly share your name to send your blessings to the family",
       icon: "mail",
     },
   ],

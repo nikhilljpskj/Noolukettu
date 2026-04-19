@@ -30,7 +30,7 @@ const storySegments: StorySegment[] = [
     title: "A Little Life, Deeply Loved",
     motif: "cradle",
     paragraphs: [
-      "Aarav Krishna arrived into our world with quiet wonder and so much joy.",
+      "Baby Name arrived into our world with quiet wonder and so much joy.",
       "In these first tender weeks, every prayer, every smile, and every blessing has felt like a gift held close.",
     ],
     quote: '"Some names are spoken first in love, then carried for a lifetime."',
@@ -56,8 +56,8 @@ const storySegments: StorySegment[] = [
     title: "Held By Generations",
     motif: "lamp",
     paragraphs: [
-      "Hosted by Nikhil and Anjana, and blessed by Raghavan and Sreedevi, this gathering is made even more meaningful by the warmth of family and friends.",
-      "Your presence will add light to one of Aarav's very first milestones.",
+      "Hosted by Parent Name 1 and Parent Name 2, and blessed by Grandparent Name 1 and Grandparent Name 2, this gathering is made even more meaningful by the warmth of family and friends.",
+      "Your presence will add light to one of Baby Name's very first milestones.",
     ],
   },
   {
@@ -65,11 +65,11 @@ const storySegments: StorySegment[] = [
     align: "left",
     tone: "deep",
     eyebrow: "With Love",
-    title: "Join Us In Blessing Aarav",
+    title: "Join Us In Blessing Baby Name",
     motif: "feet",
     paragraphs: [
       "We would be delighted to welcome you for the naming ritual, family blessings, and a gentle afternoon of togetherness.",
-      "May this be the first of many beautiful memories surrounding Aarav Krishna.",
+      "May this be the first of many beautiful memories surrounding Baby Name.",
     ],
   },
 ];
@@ -258,7 +258,7 @@ export function OurStorySection({ guestName = "" }: { guestName?: string }) {
           <div className="mx-auto h-px w-28 bg-[linear-gradient(90deg,transparent,rgba(120,132,112,0.5),transparent)]" />
           <p className="mt-8 font-serif text-[1.35rem] italic leading-relaxed text-[var(--color-forest)]/84 sm:text-[1.7rem]">
             We would be delighted to share this gentle celebration with you as
-            Aarav Krishna is welcomed with blessings, tradition, and love.
+            Baby Name is welcomed with blessings, tradition, and love.
           </p>
         </motion.div>
       </div>
