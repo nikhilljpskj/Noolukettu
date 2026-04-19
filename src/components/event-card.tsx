@@ -74,6 +74,11 @@ function CalendarIcon() {
 
 export function EventCard({ event, variant }: EventCardProps) {
   const isCeremony = variant === "ceremony";
+  const isHostingLine =
+    variant === "reception" && event.names.toLowerCase().startsWith("hosted by ");
+  const hostingNames = isHostingLine
+    ? event.names.replace(/^Hosted by\s+/i, "")
+    : event.names;
 
   return (
     <section className="fade-in-section" id={event.key}>
@@ -179,9 +184,20 @@ export function EventCard({ event, variant }: EventCardProps) {
                 {event.subtitle}
               </p>
 
-              <h3 className="mt-4 font-serif text-[2.45rem] leading-[0.95] text-[var(--color-forest)] sm:text-[3.35rem] lg:text-[4.15rem]">
-                {event.names}
-              </h3>
+              {isHostingLine ? (
+                <div className="mt-4">
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-[var(--color-sage-strong)]/82 sm:text-[11px]">
+                    Hosted By
+                  </p>
+                  <h3 className="mt-3 font-serif text-[1.5rem] leading-[1.2] text-[var(--color-forest)] sm:text-[1.8rem] lg:text-[2rem]">
+                    {hostingNames}
+                  </h3>
+                </div>
+              ) : (
+                <h3 className="mt-4 font-serif text-[2.45rem] leading-[0.95] text-[var(--color-forest)] sm:text-[3.35rem] lg:text-[4.15rem]">
+                  {event.names}
+                </h3>
+              )}
 
               <DividerHeart />
             </div>
