@@ -56,9 +56,16 @@ export default function HeroSection({ guestName }: HeroSectionProps) {
 
         <p className="hero-screen__eyebrow font-script">{invitationData.intro}</p>
 
-        <p className="hero-screen__subtitle font-serif">{invitationData.heroLine}</p>
+        <p className="hero-screen__subtitle font-serif">
+          A Kerala Noolukettu Invitation
+        </p>
 
         <h1 className="hero-screen__title font-serif">{invitationData.babyName}</h1>
+
+        <p className="hero-screen__lead font-serif">
+          Join us for a tender morning of naming, blessings, and family prayer as
+          we celebrate our little one&apos;s 28th day ceremony.
+        </p>
 
         <div className="hero-screen__divider" aria-hidden="true">
           <span className="hero-screen__divider-line" />
@@ -66,17 +73,31 @@ export default function HeroSection({ guestName }: HeroSectionProps) {
           <span className="hero-screen__divider-line" />
         </div>
 
-        <p className="hero-screen__date font-serif">
-          {ceremony.title}
-          <span className="hero-screen__date-separator">&middot;</span>
-          {invitationData.heroDateLine}
-        </p>
+        <div className="hero-screen__facts">
+          <div className="hero-screen__fact-card">
+            <span className="hero-screen__fact-label">Hosted By</span>
+            <span className="hero-screen__fact-value font-serif">
+              {invitationData.parents}
+            </span>
+          </div>
 
-        <p className="hero-screen__venue font-serif">
-          Hosted by {invitationData.parents} with {invitationData.grandparents}
-          <br />
-          at {invitationData.heroVenueLine}
-        </p>
+          <div className="hero-screen__fact-card">
+            <span className="hero-screen__fact-label">With Blessings Of</span>
+            <span className="hero-screen__fact-value font-serif">
+              {invitationData.grandparents}
+            </span>
+          </div>
+
+          <div className="hero-screen__fact-card hero-screen__fact-card--wide">
+            <span className="hero-screen__fact-label">Ceremony</span>
+            <span className="hero-screen__fact-value font-serif">
+              {ceremony.title} | {invitationData.heroDateLine}
+            </span>
+            <span className="hero-screen__fact-subvalue">
+              {invitationData.heroVenueLine}
+            </span>
+          </div>
+        </div>
 
         <button
           type="button"

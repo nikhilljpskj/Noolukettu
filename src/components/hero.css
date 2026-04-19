@@ -216,6 +216,14 @@
   text-shadow: 0 2px 12px rgba(255, 255, 255, 0.54);
 }
 
+.hero-screen__lead {
+  margin: 14px 0 0;
+  max-width: 560px;
+  font-size: clamp(1rem, 1.35vw, 1.16rem);
+  line-height: 1.75;
+  color: rgba(52, 69, 62, 0.82);
+}
+
 .hero-screen__divider {
   display: flex;
   align-items: center;
@@ -249,12 +257,47 @@
   color: rgba(201, 169, 108, 0.88);
 }
 
-.hero-screen__venue {
-  margin: 12px 0 0;
-  max-width: 520px;
-  font-size: clamp(1rem, 1.4vw, 1.18rem);
+.hero-screen__facts {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 620px);
+  margin-top: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.hero-screen__fact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(244, 237, 228, 0.5));
+  box-shadow: 0 10px 24px rgba(117, 122, 109, 0.08);
+}
+
+.hero-screen__fact-card--wide {
+  grid-column: 1 / -1;
+}
+
+.hero-screen__fact-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(86, 119, 109, 0.86);
+}
+
+.hero-screen__fact-value {
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  line-height: 1.45;
+  color: rgba(46, 64, 56, 0.96);
+}
+
+.hero-screen__fact-subvalue {
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(59, 77, 70, 0.88);
+  color: rgba(69, 88, 80, 0.74);
 }
 
 .hero-screen__button {
@@ -362,15 +405,33 @@
     font-size: 2.45rem;
   }
 
+  .hero-screen__lead {
+    margin-top: 12px;
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
   .hero-screen__divider {
     margin-top: 12px;
     width: min(100%, 220px);
   }
 
-  .hero-screen__date,
-  .hero-screen__venue {
-    margin-top: 12px;
+  .hero-screen__facts {
+    grid-template-columns: 1fr;
+    margin-top: 16px;
+  }
+
+  .hero-screen__fact-card {
+    padding: 12px 14px;
+    border-radius: 18px;
+  }
+
+  .hero-screen__fact-value {
     font-size: 0.98rem;
+  }
+
+  .hero-screen__fact-subvalue {
+    font-size: 0.92rem;
   }
 
   .hero-screen__button {
