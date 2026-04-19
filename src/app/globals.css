@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf4ec;
+  --foreground: #2f3d37;
+  --color-ivory: #faf4ec;
+  --color-blush: #f2e4d8;
+  --color-sage: #dce7df;
+  --color-sage-strong: #6f867d;
+  --color-forest: #31443d;
+  --color-rose: #d5a496;
+  --color-peach: #efd8c8;
+  --color-teal: #d6e7e3;
+  --color-teal-strong: #56776d;
+  --color-baby-gold: #c9a96b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+  --font-script: "Snell Roundhand", "Lucida Handwriting", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(214, 231, 227, 0.42), transparent 32%),
+    linear-gradient(180deg, #fdf8f2 0%, #f6ede2 100%);
+  color: var(--foreground);
+  font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(213, 164, 150, 0.12), transparent 12%),
+    radial-gradient(circle at 92% 12%, rgba(86, 119, 109, 0.08), transparent 12%),
+    linear-gradient(rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.28));
+  opacity: 0.9;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.fade-in-section {
+  animation: fadeInUp 1s ease both;
+}
+
+.floating-petal {
+  position: absolute;
+  border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+  background: linear-gradient(180deg, rgba(239, 216, 200, 0.76), rgba(255, 241, 234, 0.18));
+  filter: blur(0.2px);
+  transform: rotate(18deg);
+  animation: petalFloat 14s linear infinite;
+}
+
+.floral-cluster {
+  position: absolute;
+  top: 0;
+  width: 270px;
+  height: 290px;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.floral-cluster::before,
+.floral-cluster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.floral-cluster::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(111, 134, 125, 0.82) 0 7%, rgba(214, 231, 227, 0.46) 7.1% 10%, transparent 10.2%),
+    radial-gradient(circle at 29% 42%, rgba(239, 216, 200, 0.95) 0 7%, rgba(248, 233, 222, 0.8) 7.1% 11%, transparent 11.2%),
+    radial-gradient(circle at 54% 48%, rgba(248, 246, 238, 0.98) 0 7%, rgba(201, 169, 107, 0.48) 7.1% 10%, transparent 10.2%),
+    radial-gradient(circle at 81% 18%, rgba(214, 231, 227, 0.88) 0 6%, rgba(163, 192, 182, 0.5) 6.1% 9%, transparent 9.2%),
+    radial-gradient(circle at 84% 43%, rgba(213, 164, 150, 0.86) 0 7%, rgba(239, 216, 200, 0.76) 7.1% 11%, transparent 11.2%),
+    radial-gradient(circle at 64% 14%, rgba(214, 231, 227, 0.78) 0 3%, transparent 3.1%),
+    radial-gradient(circle at 46% 10%, rgba(201, 169, 107, 0.42) 0 3%, transparent 3.1%);
+}
+
+.floral-cluster::after {
+  background:
+    radial-gradient(ellipse at 14% 65%, rgba(86, 119, 109, 0.44) 0 2%, transparent 2.2%),
+    linear-gradient(115deg, transparent 27%, rgba(111, 134, 125, 0.42) 27.3% 28.1%, transparent 28.4%),
+    linear-gradient(82deg, transparent 47%, rgba(111, 134, 125, 0.4) 47.3% 48.1%, transparent 48.4%),
+    radial-gradient(ellipse at 30% 62%, rgba(163, 182, 151, 0.6) 0 5%, transparent 5.2%),
+    radial-gradient(ellipse at 38% 72%, rgba(163, 182, 151, 0.56) 0 5%, transparent 5.2%),
+    radial-gradient(ellipse at 68% 24%, rgba(163, 182, 151, 0.58) 0 5%, transparent 5.2%),
+    radial-gradient(ellipse at 75% 34%, rgba(163, 182, 151, 0.54) 0 5%, transparent 5.2%),
+    radial-gradient(ellipse at 80% 56%, rgba(163, 182, 151, 0.58) 0 5%, transparent 5.2%),
+    radial-gradient(ellipse at 73% 66%, rgba(163, 182, 151, 0.56) 0 5%, transparent 5.2%);
+  filter: blur(0.2px);
+}
+
+.floral-cluster-left {
+  left: 0;
+}
+
+.floral-cluster-right {
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.mist-layer {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.28) 52%, transparent 75%);
+  filter: blur(24px);
+}
+
+.mist-layer-top {
+  left: 12%;
+  top: 31%;
+  width: 24%;
+  height: 15%;
+}
+
+.mist-layer-center {
+  left: 35%;
+  top: 45%;
+  width: 32%;
+  height: 16%;
+}
+
+.mist-layer-bottom {
+  left: 16%;
+  bottom: 4%;
+  width: 72%;
+  height: 16%;
+}
+
+.petal-speck {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 32% 46%, rgba(239, 216, 200, 0.55) 0 6%, transparent 6.2%),
+    radial-gradient(circle at 68% 22%, rgba(246, 236, 224, 0.9) 0 5%, transparent 5.2%),
+    radial-gradient(circle at 72% 62%, rgba(214, 231, 227, 0.56) 0 4%, transparent 4.2%);
+  opacity: 0.65;
+}
+
+.petal-speck-left {
+  left: 18px;
+  top: 28px;
+}
+
+.petal-speck-right {
+  right: 18px;
+  top: 28px;
+}
+
+.animation-delay-0 {
+  animation-delay: 0s;
+}
+
+.animation-delay-1 {
+  animation-delay: -2s;
+}
+
+.animation-delay-2 {
+  animation-delay: -4s;
+}
+
+.animation-delay-3 {
+  animation-delay: -6s;
+}
+
+.animation-delay-4 {
+  animation-delay: -8s;
+}
+
+.submit-success-pulse {
+  animation: successPulse 0.75s ease-out;
+}
+
+.floral-burst,
+.flower-spark,
+.petal-pop {
+  position: absolute;
+  pointer-events: none;
+}
+
+.floral-burst {
+  top: 34%;
+  width: 220px;
+  height: 220px;
+}
+
+.floral-burst::before,
+.floral-burst::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 24% 24%, rgba(86, 119, 109, 0.8) 0 4.8%, rgba(214, 231, 227, 0.62) 4.9% 7.2%, transparent 7.3%),
+    radial-gradient(circle at 56% 18%, rgba(245, 227, 219, 0.96) 0 4.2%, rgba(213, 164, 150, 0.6) 4.3% 6.6%, transparent 6.7%),
+    radial-gradient(circle at 70% 58%, rgba(239, 216, 200, 0.96) 0 4.4%, rgba(111, 134, 125, 0.46) 4.5% 6.4%, transparent 6.5%),
+    radial-gradient(circle at 36% 70%, rgba(248, 246, 238, 0.98) 0 4.8%, rgba(201, 169, 107, 0.46) 4.9% 6.6%, transparent 6.7%),
+    radial-gradient(circle at 78% 34%, rgba(213, 164, 150, 0.86) 0 4.5%, rgba(239, 216, 200, 0.72) 4.6% 6.7%, transparent 6.8%);
+  animation: floralBurst 1.15s ease-out forwards;
+}
+
+.floral-burst::after {
+  transform: rotate(28deg);
+  animation-delay: 0.08s;
+}
+
+.floral-burst-left {
+  left: 8%;
+}
+
+.floral-burst-right {
+  right: 8%;
+}
+
+.flower-spark {
+  width: 34px;
+  height: 34px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(86, 119, 109, 0.82) 0 18%, rgba(248, 246, 238, 0.9) 18.1% 28%, transparent 28.1%),
+    radial-gradient(circle at 50% 22%, rgba(239, 216, 200, 0.92) 0 14%, transparent 14.1%),
+    radial-gradient(circle at 78% 42%, rgba(239, 216, 200, 0.92) 0 14%, transparent 14.1%),
+    radial-gradient(circle at 66% 78%, rgba(239, 216, 200, 0.92) 0 14%, transparent 14.1%),
+    radial-gradient(circle at 34% 78%, rgba(239, 216, 200, 0.92) 0 14%, transparent 14.1%),
+    radial-gradient(circle at 22% 42%, rgba(239, 216, 200, 0.92) 0 14%, transparent 14.1%);
+  transform-origin: center;
+  animation: flowerSpark 0.95s ease-out forwards;
+}
+
+.flower-spark-one {
+  left: 48%;
+  top: 44%;
+}
+
+.flower-spark-two {
+  left: 42%;
+  top: 53%;
+  animation-delay: 0.08s;
+}
+
+.flower-spark-three {
+  left: 56%;
+  top: 52%;
+  animation-delay: 0.14s;
+}
+
+.petal-pop {
+  opacity: 0;
+  animation: petalPop 0.9s ease-out forwards;
+}
+
+.petal-pop-one {
+  left: 47%;
+  top: 47%;
+  width: 18px;
+  height: 12px;
+  border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+  background: rgba(213, 164, 150, 0.44);
+}
+
+.petal-pop-two {
+  left: 53%;
+  top: 48%;
+  width: 16px;
+  height: 10px;
+  border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+  background: rgba(86, 119, 109, 0.42);
+  animation-delay: 0.08s;
+}
+
+.petal-pop-three {
+  left: 50%;
+  top: 41%;
+  width: 17px;
+  height: 11px;
+  border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+  background: rgba(239, 216, 200, 0.64);
+  animation-delay: 0.12s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(34px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes petalFloat {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(18deg);
+    opacity: 0;
+  }
+
+  14% {
+    opacity: 0.76;
+  }
+
+  55% {
+    transform: translate3d(26px, 160px, 0) rotate(58deg);
+  }
+
+  100% {
+    transform: translate3d(-14px, 320px, 0) rotate(84deg);
+    opacity: 0;
+  }
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.04);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floralBurst {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.24);
+    opacity: 0;
+  }
+}
+
+@keyframes flowerSpark {
+  0% {
+    transform: scale(0.45) rotate(0deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.5) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes petalPop {
+  0% {
+    transform: scale(0.4) rotate(12deg);
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-28px) scale(1.35) rotate(38deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .floral-cluster {
+    width: 170px;
+    height: 180px;
+  }
+
+  .mist-layer-top {
+    left: 4%;
+    top: 16%;
+    width: 44%;
+  }
+
+  .mist-layer-center {
+    left: 20%;
+    top: 41%;
+    width: 60%;
+  }
+
+  .mist-layer-bottom {
+    left: 4%;
+    width: 86%;
+  }
+
+  .floral-burst {
+    width: 160px;
+    height: 160px;
+  }
+
+  .floral-burst-left {
+    left: -4%;
+  }
+
+  .floral-burst-right {
+    right: -4%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-in-section,
+  .floating-petal {
+    animation: none;
+  }
+}

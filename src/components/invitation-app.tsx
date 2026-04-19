@@ -1,0 +1,109 @@
+"use client";
+
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { DecorativeLayer } from "@/components/decorative-layer";
+import { EventCard } from "@/components/event-card";
+import HeroSection from "@/components/hero-section";
+import { RSVPSection } from "@/components/rsvp-section";
+import { invitationData } from "@/lib/invitation-data";
+
+function FeatureTiles({ guestName }: { guestName: string }) {
+  const storyHref = guestName
+    ? `/our-story?guest=${encodeURIComponent(guestName)}`
+    : "/our-story";
+  const galleryHref = guestName
+    ? `/gallery?guest=${encodeURIComponent(guestName)}`
+    : "/gallery";
+
+  const items = [
+    {
+      title: "Blessing Note",
+      body: "A quiet page for the meaning behind Aarav's naming day",
+      icon: "\u273F",
+      href: storyHref,
+    },
+    {
+      title: "Ceremony Moodboard",
+      body: "Traditional Kerala details and soft ceremonial motifs",
+      icon: "\u25CC",
+      href: galleryHref,
+    },
+    {
+      title: "Venue Details",
+      body: "Address, timing and hosting information for the gathering",
+      icon: "\u2316",
+    },
+    {
+      title: "RSVP",
+      body: "Kindly confirm your presence with Nikhil or Anjana",
+      icon: "\u2709",
+    },
+  ];
+
+  return (
+    <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      {items.map((item) => (
+        <article
+          key={item.title}
+          className="rounded-[24px] border border-white/80 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(248,243,237,0.98))] px-6 py-7 text-center shadow-[0_16px_42px_rgba(113,126,108,0.1)]"
+        >
+          {item.href ? (
+            <Link href={item.href} className="block">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[#f7f6f1] text-[28px] text-[var(--color-sage-strong)]">
+                {item.icon}
+              </div>
+              <h3 className="mt-5 font-serif text-[2rem] leading-none text-[var(--color-forest)]">
+                {item.title}
+              </h3>
+              <p className="mx-auto mt-3 max-w-[180px] text-[16px] leading-7 text-stone-600">
+                {item.body}
+              </p>
+            </Link>
+          ) : (
+            <>
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border border-[var(--color-sage-strong)]/16 bg-[#f7f6f1] text-[28px] text-[var(--color-sage-strong)]">
+                {item.icon}
+              </div>
+              <h3 className="mt-5 font-serif text-[2rem] leading-none text-[var(--color-forest)]">
+                {item.title}
+              </h3>
+              <p className="mx-auto mt-3 max-w-[180px] text-[16px] leading-7 text-stone-600">
+                {item.body}
+              </p>
+            </>
+          )}
+        </article>
+      ))}
+    </section>
+  );
+}
+
+export function InvitationApp() {
+  const searchParams = useSearchParams();
+  const guestName = searchParams.get("guest")?.trim() ?? "";
+  const hasGuestParam = Boolean(guestName);
+
+  return (
+    <main className="relative overflow-hidden bg-[var(--color-ivory)]">
+      <DecorativeLayer />
+
+      <div className="mx-auto flex min-h-screen w-full max-w-[1120px] flex-col gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:px-8">
+        <section className="relative" id="hero">
+          <HeroSection guestName={guestName} />
+        </section>
+
+        <section className="space-y-4" id="events">
+          <EventCard
+            event={invitationData.events.ceremony}
+            variant="ceremony"
+          />
+          <EventCard event={invitationData.events.reception} variant="reception" />
+          <FeatureTiles guestName={guestName} />
+        </section>
+
+        <RSVPSection guestName={guestName} hasGuestParam={hasGuestParam} />
+      </div>
+    </main>
+  );
+}
