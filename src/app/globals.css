@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --color-gold: #C59B27;
+  --color-gold-light: #F3E5AB;
+  --color-gold-dark: #8C6D1F;
+  --color-terracotta: #A83232;
+  --color-maroon: #5A121C;
+  --color-cream: #FAF7F2;
+  --color-ivory: #FFFDF9;
+  --color-sage: #1B4D3E;
+  --color-sage-light: #EBF3EF;
+  --color-dark: #1E1A16;
+  --color-muted: #6B6258;
+  --border-gold: rgba(197, 155, 39, 0.35);
+  --shadow-gold: 0 12px 36px rgba(197, 155, 39, 0.14);
+}
+
+@theme inline {
+  --color-gold: var(--color-gold);
+  --color-cream: var(--color-cream);
+  --color-maroon: var(--color-maroon);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #FAF7F2;
+  background-image: 
+    radial-gradient(circle at 10% 15%, rgba(197, 155, 39, 0.07) 0%, transparent 40%),
+    radial-gradient(circle at 90% 85%, rgba(168, 50, 50, 0.05) 0%, transparent 40%),
+    linear-gradient(180deg, #FFFDF9 0%, #FAF7F2 100%);
+  color: #1E1A16;
+  font-family: var(--font-sans, "Montserrat", sans-serif);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #C59B27;
+  border-radius: 4px;
+}
+
+/* Floating Audio Toggle */
+.floating-audio-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #5A121C;
+  border: 1.5px solid #C59B27;
+  color: #F3E5AB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(90, 18, 28, 0.35);
+  z-index: 999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-audio-btn:hover {
+  transform: scale(1.08);
+  background: #A83232;
+  box-shadow: 0 14px 30px rgba(197, 155, 39, 0.4);
+}
+
+.floating-audio-btn.playing {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(197, 155, 39, 0);
+  }
+}
+
+/* Golden Decorative Elements */
+.gold-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 18px 0;
+}
+
+.gold-divider-line {
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, #C59B27, transparent);
+}
+
+.gold-divider-icon {
+  color: #C59B27;
+  font-size: 14px;
+}
+
+/* Glassmorphism Cards */
+.kerala-glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 155, 39, 0.28);
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(70, 50, 30, 0.07);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kerala-glass-card:hover {
+  border-color: rgba(197, 155, 39, 0.55);
+  box-shadow: 0 22px 55px rgba(197, 155, 39, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Polaroid Styling */
+.polaroid-card {
+  background: #FFF;
+  padding: 12px 12px 28px;
+  border-radius: 6px;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease;
+}
+
+.polaroid-card:hover {
+  transform: scale(1.03) rotate(0deg) !important;
+}
+
+.polaroid-caption {
+  font-family: var(--font-script, "Great Vibes", cursive);
+  font-size: 1.5rem;
+  color: #5A121C;
+  text-align: center;
+  margin-top: 12px;
+  line-height: 1.2;
+}
